@@ -1,0 +1,2 @@
+class AlbumComicTripsController < ApplicationController
+end

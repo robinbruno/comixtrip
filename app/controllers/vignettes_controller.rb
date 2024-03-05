@@ -1,0 +1,2 @@
+class VignettesController < ApplicationController
+end

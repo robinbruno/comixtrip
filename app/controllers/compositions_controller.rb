@@ -1,0 +1,2 @@
+class CompositionsController < ApplicationController
+end
