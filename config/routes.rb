@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :album_comic_trips
+  resources :albums
+  resources :compositions
+  resources :elements
+  resources :vignettes
   resources :bookmarks
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
