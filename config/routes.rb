@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  resources :album_comic_trips
-  resources :albums
-  resources :compositions
-  resources :elements
-  resources :vignettes
-  resources :bookmarks
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -18,6 +12,12 @@ Rails.application.routes.draw do
   root to: "comic_trips#index"
 
   resources :comic_trips, path: 'comics', only: [:index, :show, :new, :create]
+  resources :bookmarks
 
-  
+  resources :compositions, only: []
+  resources :elements, only: []
+  resources :vignettes, only: []
+
+  resources :album_comic_trips, only: []
+  resources :albums, only: []
 end

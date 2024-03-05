@@ -1,8 +1,9 @@
 class ComicTripsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index ]
 
   def home
     @comic_trips = ComicTrip.all
-    # randomize the carousel
+    # # randomize the carousel
     @random_comic_trip = ComicTrip.order("RANDOM()").first
   end
 
