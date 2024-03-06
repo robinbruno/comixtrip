@@ -6,5 +6,8 @@ class User < ApplicationRecord
   has_many :bookmarks
   has_many :comic_trips
   has_many :albums
-  
+
+  def avatar_url
+    avatar.presence || '/assets/images/default_avatar.png'
+  end
 end
