@@ -1,0 +1,137 @@
+.footer {
+  background-color: #9b2226ff; /* Couleur de fond du footer */
+  color: #fff; /* Couleur du texte */
+  padding: 50px 0; /* Espacement intérieur du footer */
+}
+
+.footer-inner {
+  max-width: 1200px; /* Largeur maximale du contenu du footer */
+  margin: 0 auto; /* Centre le contenu du footer horizontalement */
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.footer-column {
+  margin-right: 30px; /* Espacement entre les colonnes */
+}
+
+.footer-column h3 {
+  font-size: 18px; /* Taille de la police des titres de colonne */
+}
+
+.footer-column ul {
+  list-style: none; /* Supprime les puces de la liste */
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+.footer-column ul li a {
+  color: #fff; /* Couleur des liens */
+  text-decoration: none; /* Supprime les soulignements des liens */
+}
+
+.footer-info {
+  text-align: right;
+}
+
+.footer-info p {
+  font-size: 14px; /* Taille de la police des informations de copyright */
+}
+
+.social-links a {
+  color: #fff; /* Couleur des icônes des réseaux sociaux */
+  margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.social-links a:hover {
+  color: #ccc; /* Couleur des icônes des réseaux sociaux au survol */
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.footer-column {
+  margin-right: 30px; /* Espacement entre les colonnes */
+}
+
+.footer-column:last-child {
+  margin-right: 0; /* Aucun espacement pour le dernier élément */
+}
+
+.footer-info {
+  text-align: right;
+}
+
+.footer-info img {
+  width: 100px; /* Ajustez la taille du logo selon vos besoins */
+  margin-bottom: 10px; /* Espacement entre le logo et les icônes */
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  color: #fff; /* Couleur des icônes des réseaux sociaux */
+  margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.social-links a:last-child {
+  margin-right: 0; /* Aucun espacement pour le dernier élément */
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.footer-column {
+  margin-right: 30px; /* Espacement entre les colonnes */
+}
+
+.footer-column:last-child {
+  margin-right: 0; /* Aucun espacement pour le dernier élément */
+}
+
+.footer-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer les éléments horizontalement */
+}
+
+.footer-info img {
+  width: 100px; /* Ajustez la taille du logo selon vos besoins */
+  margin-bottom: 10px; /* Espacement entre le logo et les icônes */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; /* Centrer les icônes horizontalement */
+}
+
+.social-links a {
+  color: #fff; /* Couleur des icônes des réseaux sociaux */
+  margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.social-links a:last-child {
+  margin-right: 0; /* Aucun espacement pour le dernier élément */
+}

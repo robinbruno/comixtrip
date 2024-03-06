@@ -1,2 +1,49 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="comic-bubbles">
+    <div class="bubble">
+      <p>Bulle 1</p>
+    </div>
+    <div class="bubble">
+      <p>Bulle 2</p>
+    </div>
+    <div class="bubble">
+      <p>Bulle 3</p>
+    </div>
+  </div>
+  <div id="comic-strip-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#comic-strip-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#comic-strip-carousel" data-slide-to="1"></li>
+      <li data-target="#comic-strip-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="comic-strip">
+          <div class="comic-panel">
+            <p>Vignette 1</p>
+          </div>
+          <div class="comic-panel">
+            <p>Vignette 2</p>
+          </div>
+          <div class="comic-panel">
+            <p>Vignette 3</p>
+          </div>
+        </div>
+      </div>
+      <!-- Ajoutez deux autres blocs comme ci-dessus pour les autres comic strips -->
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#comic-strip-carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#comic-strip-carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
