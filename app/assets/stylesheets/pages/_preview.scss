@@ -1,32 +1,69 @@
 .preview-container {
+  width: 1000px;
+  height: 430px;
   background-color: white;
   padding: 10px;
   margin: 20px auto;
   text-align: center;
 }
 
-.comic {
-  width: 100%;
-  height: 350px;
-  background-color: $gamboge;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .comic {
+//   width: 100%;
+//   // height: 330px;
+//   background-color: $gamboge;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 .vignettes {
   display: flex;
   justify-content: space-around;
-
 }
 
 .vignette {
   display: flex;
   justify-content: space-around;
+  position: relative;
   width: 260px;
   height: 260px;
   background-color: $dark-cyan;
-  border: 4px solid black;
+  border: 6px solid black;
   margin: 10px;
 }
+
+.rectangle-left,
+.rectangle-right {
+  width: 260px;
+  background-color: $tiffany-blue;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.rectangle-right {
+  background-color: $vanilla;
+  margin-left: 5px;
+  text-align: right;
+}
+
+.rectangle-left {
+  margin-right: 5px;
+  text-align: left;
+}
+
+
+// .rectangle-left {
+//   width: 20px;
+//   height: 260px;
+//   background-color: $tiffany-blue;
+//   // position: absolute;
+//   top: 0;
+// }
+
+// .rectangle-right {
+//   width: 20px;
+//   height: 260px;
+//   background-color: $vanilla;
+//   // position: absolute;
+//   top: 0;
+// }
