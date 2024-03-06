@@ -1,0 +1,22 @@
+.preview-container {
+  background-color: $gradient-top;
+  padding: 20px;
+}
+
+.comic {
+  width: 100%;
+  height: 200px;
+  background-color: $gradient-bottom-left;
+  margin-bottom: 20px;
+}
+
+.vignettes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vignette {
+  width: calc(33.33% - 10px);
+  height: 100px;
+  background-color: $gradient-radial;
+}
