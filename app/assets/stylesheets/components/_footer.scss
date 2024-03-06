@@ -1,12 +1,13 @@
 .footer {
-  background-color: #9b2226ff; /* Couleur de fond du footer */
-  color: #fff; /* Couleur du texte */
-  padding: 50px 0; /* Espacement intérieur du footer */
+  background-color: #9b2226ff;
+  height: 200px;
+  color: #fff;
+  padding: 50px 0;
 }
 
 .footer-inner {
-  max-width: 1200px; /* Largeur maximale du contenu du footer */
-  margin: 0 auto; /* Centre le contenu du footer horizontalement */
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -16,25 +17,25 @@
 }
 
 .footer-column {
-  margin-right: 30px; /* Espacement entre les colonnes */
+  margin-right: 30px;
 }
 
 .footer-column h3 {
-  font-size: 18px; /* Taille de la police des titres de colonne */
+  font-size: 18px;
 }
 
 .footer-column ul {
-  list-style: none; /* Supprime les puces de la liste */
+  list-style: none;
   padding: 0;
 }
 
 .footer-column ul li {
-  margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+  margin-bottom: 10px;
 }
 
 .footer-column ul li a {
-  color: #fff; /* Couleur des liens */
-  text-decoration: none; /* Supprime les soulignements des liens */
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer-info {
@@ -42,16 +43,16 @@
 }
 
 .footer-info p {
-  font-size: 14px; /* Taille de la police des informations de copyright */
+  font-size: 14px;
 }
 
 .social-links a {
-  color: #fff; /* Couleur des icônes des réseaux sociaux */
-  margin-right: 10px; /* Espacement entre les icônes */
+  color: #fff;
+  margin-right: 10px;
 }
 
 .social-links a:hover {
-  color: #ccc; /* Couleur des icônes des réseaux sociaux au survol */
+  color: #ccc;
 }
 .footer-inner {
   display: flex;
@@ -64,11 +65,11 @@
 }
 
 .footer-column {
-  margin-right: 30px; /* Espacement entre les colonnes */
+  margin-right: 30px;
 }
 
 .footer-column:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
+  margin-right: 0;
 }
 
 .footer-info {
@@ -76,8 +77,8 @@
 }
 
 .footer-info img {
-  width: 100px; /* Ajustez la taille du logo selon vos besoins */
-  margin-bottom: 10px; /* Espacement entre le logo et les icônes */
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 .social-links {
@@ -85,12 +86,12 @@
 }
 
 .social-links a {
-  color: #fff; /* Couleur des icônes des réseaux sociaux */
-  margin-right: 10px; /* Espacement entre les icônes */
+  color: #fff;
+  margin-right: 10px;
 }
 
 .social-links a:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
+  margin-right: 0;
 }
 .footer-inner {
   display: flex;
@@ -103,35 +104,35 @@
 }
 
 .footer-column {
-  margin-right: 30px; /* Espacement entre les colonnes */
+  margin-right: 30px;
 }
 
 .footer-column:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
+  margin-right: 0;
 }
 
 .footer-info {
   text-align: right;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrer les éléments horizontalement */
+  align-items: center;
 }
 
 .footer-info img {
-  width: 100px; /* Ajustez la taille du logo selon vos besoins */
-  margin-bottom: 10px; /* Espacement entre le logo et les icônes */
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 .social-links {
   display: flex;
-  justify-content: center; /* Centrer les icônes horizontalement */
+  justify-content: center;
 }
 
 .social-links a {
-  color: #fff; /* Couleur des icônes des réseaux sociaux */
-  margin-right: 10px; /* Espacement entre les icônes */
+  color: #fff;
+  margin-right: 10px;
 }
 
 .social-links a:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
+  margin-right: 0;
 }
