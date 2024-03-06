@@ -1,41 +1,25 @@
 .footer {
-  background-color: #9b2226ff;
-  height: 200px;
-  color: #fff;
-  padding: 50px 0;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  background: $auburn;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: $midnight-green;
 }
-
-.footer-columns {
+.footer-links {
   display: flex;
+  align-items: center;
 }
-
-.footer-column {
-  margin-right: 30px;
-}
-
-.footer-column h3 {
-  font-size: 18px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-  color: #fff;
+.footer-links a {
+  color: $vanilla;
+  opacity: 0.85;
   text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
 }
 
 .footer-info {
@@ -46,93 +30,7 @@
   font-size: 14px;
 }
 
-.social-links a {
-  color: #fff;
-  margin-right: 10px;
-}
-
-.social-links a:hover {
-  color: #ccc;
-}
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-columns {
-  display: flex;
-}
-
-.footer-column {
-  margin-right: 30px;
-}
-
-.footer-column:last-child {
-  margin-right: 0;
-}
-
-.footer-info {
-  text-align: right;
-}
-
 .footer-info img {
   width: 100px;
   margin-bottom: 10px;
-}
-
-.social-links {
-  display: flex;
-}
-
-.social-links a {
-  color: #fff;
-  margin-right: 10px;
-}
-
-.social-links a:last-child {
-  margin-right: 0;
-}
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-columns {
-  display: flex;
-}
-
-.footer-column {
-  margin-right: 30px;
-}
-
-.footer-column:last-child {
-  margin-right: 0;
-}
-
-.footer-info {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-info img {
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-}
-
-.social-links a {
-  color: #fff;
-  margin-right: 10px;
-}
-
-.social-links a:last-child {
-  margin-right: 0;
 }
