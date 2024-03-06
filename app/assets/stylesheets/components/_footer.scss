@@ -1,40 +1,25 @@
 .footer {
-  background-color: #9b2226ff; /* Couleur de fond du footer */
-  color: #fff; /* Couleur du texte */
-  padding: 50px 0; /* Espacement intérieur du footer */
-}
-
-.footer-inner {
-  max-width: 1200px; /* Largeur maximale du contenu du footer */
-  margin: 0 auto; /* Centre le contenu du footer horizontalement */
+  background: $auburn;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: $midnight-green;
 }
-
-.footer-columns {
+.footer-links {
   display: flex;
+  align-items: center;
 }
-
-.footer-column {
-  margin-right: 30px; /* Espacement entre les colonnes */
+.footer-links a {
+  color: $vanilla;
+  opacity: 0.85;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
 }
-
-.footer-column h3 {
-  font-size: 18px; /* Taille de la police des titres de colonne */
-}
-
-.footer-column ul {
-  list-style: none; /* Supprime les puces de la liste */
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px; /* Espacement entre les éléments de la liste */
-}
-
-.footer-column ul li a {
-  color: #fff; /* Couleur des liens */
-  text-decoration: none; /* Supprime les soulignements des liens */
+.footer-links a:hover {
+  opacity: 1;
 }
 
 .footer-info {
@@ -42,96 +27,10 @@
 }
 
 .footer-info p {
-  font-size: 14px; /* Taille de la police des informations de copyright */
-}
-
-.social-links a {
-  color: #fff; /* Couleur des icônes des réseaux sociaux */
-  margin-right: 10px; /* Espacement entre les icônes */
-}
-
-.social-links a:hover {
-  color: #ccc; /* Couleur des icônes des réseaux sociaux au survol */
-}
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-columns {
-  display: flex;
-}
-
-.footer-column {
-  margin-right: 30px; /* Espacement entre les colonnes */
-}
-
-.footer-column:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
-}
-
-.footer-info {
-  text-align: right;
+  font-size: 14px;
 }
 
 .footer-info img {
-  width: 100px; /* Ajustez la taille du logo selon vos besoins */
-  margin-bottom: 10px; /* Espacement entre le logo et les icônes */
-}
-
-.social-links {
-  display: flex;
-}
-
-.social-links a {
-  color: #fff; /* Couleur des icônes des réseaux sociaux */
-  margin-right: 10px; /* Espacement entre les icônes */
-}
-
-.social-links a:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
-}
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-columns {
-  display: flex;
-}
-
-.footer-column {
-  margin-right: 30px; /* Espacement entre les colonnes */
-}
-
-.footer-column:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
-}
-
-.footer-info {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centrer les éléments horizontalement */
-}
-
-.footer-info img {
-  width: 100px; /* Ajustez la taille du logo selon vos besoins */
-  margin-bottom: 10px; /* Espacement entre le logo et les icônes */
-}
-
-.social-links {
-  display: flex;
-  justify-content: center; /* Centrer les icônes horizontalement */
-}
-
-.social-links a {
-  color: #fff; /* Couleur des icônes des réseaux sociaux */
-  margin-right: 10px; /* Espacement entre les icônes */
-}
-
-.social-links a:last-child {
-  margin-right: 0; /* Aucun espacement pour le dernier élément */
+  width: 100px;
+  margin-bottom: 10px;
 }
