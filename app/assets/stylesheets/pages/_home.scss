@@ -1,39 +1,4 @@
-.comic-bubbles {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
 
-.bubble {
-  position: relative;
-  width: 100px;
-  height: 50px;
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 50%;
+body {
+  background: $vanilla;
 }
-
-.bubble p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-.comic-strip {
-  display: flex;
-  justify-content: space-around;
-}
-
-.comic-panel {
-  flex: 1;
-  border: 1px solid #ccc;
-  text-align: center;
-  padding: 20px;
-  margin: 5px; /* Ajoutez une marge pour séparer les vignettes horizontalement */
-}
-
-.comic-panel p {
-  margin: 0;
-}
-
