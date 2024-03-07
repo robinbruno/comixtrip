@@ -16,12 +16,22 @@
 //   align-items: center;
 // }
 
+.comic-title {
+  width: 900px;
+  justify-content: center;
+  border: 6px solid black;
+}
+
 .vignettes {
   display: flex;
   justify-content: space-around;
 }
 
-.vignette {
+.vignettes-text {
+  position: relative;
+}
+
+.element {
   display: flex;
   justify-content: space-around;
   position: relative;
@@ -30,6 +40,12 @@
   background-color: $dark-cyan;
   border: 6px solid black;
   margin: 10px;
+}
+
+.background-image, .overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .rectangle-left,
@@ -42,7 +58,7 @@
 
 .rectangle-right {
   background-color: $vanilla;
-  margin-left: 5px;
+  margin-left: 10px;
   text-align: right;
 }
 
@@ -51,19 +67,6 @@
   text-align: left;
 }
 
-
-// .rectangle-left {
-//   width: 20px;
-//   height: 260px;
-//   background-color: $tiffany-blue;
-//   // position: absolute;
-//   top: 0;
-// }
-
-// .rectangle-right {
-//   width: 20px;
-//   height: 260px;
-//   background-color: $vanilla;
-//   // position: absolute;
-//   top: 0;
-// }
+.img {
+  opacity: 0.5;
+}
