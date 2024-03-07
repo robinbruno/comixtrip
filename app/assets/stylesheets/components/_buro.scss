@@ -1,36 +1,123 @@
 .creation-section {
   background-color: #bb3e03;
-  margin: 30px;
-  bottom: 150px;
+  // bottom: 300px;
   left: 100px;
   right: 100px;
-  height: 200px;
-  border-radius: 10px;
-  border: 2px solid #000;
+  height: 220px;
+  border: 6px solid $midnight-green;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction:column;
+  // align-items: flex-start;
+  width: 55%;
+  position: absolute;
 }
 
-.creation-section button {
-  display: inline-block;
-  margin: 5px 10px 3px 5px;
-  background-color: #ccc;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 11px;
-  cursor: pointer;
-}
-
-.delete-button, .big-button {
-  margin-left: 1px;
+.publish {
+  margin-left: auto;
+  margin-right: 50px;
   font-size: 11px;
   color: #9b2226;
-  float: right;
+  border-radius: 2px;
+  border: 2px;
+  width: 50px;
+  height: 50px;
+}
+
+.del-button,
+.del-button2 {
+  background-color: #9b2226;
+  margin-left: 8px;
+  font-size: 11px;
+  color: #ffffff;
   border-radius: 5px;
 }
 
-.big-button {
-  border: 2px solid #9b2226;
+.del-button2 {
+  margin-left: 10px;
+}
+
+.publish-container {
+  margin-top: 20px;
+}
+
+.element-container {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.rectangle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rectangle {
+  width: 400px;
+  height: 24px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.rectangle input[type="text"] {
+  width: 200px;
+  height: 20px;
+  margin-left: 5px;
+  border: none;
+}
+
+.none1,
+.print1,
+.none2,
+.print2 {
+  background-color: #9b2226ff;
+  font-size: 10px;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 3px;
+  border: none;
+}
+
+.print1,
+.print2 {
+  background-color: #0a9396ff;
+}
+
+.none2,
+.print2 {
+  margin-top: 3px;
+}
+
+.superposed-library {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: auto;
+}
+.superposed-library button {
+  background-color: #9b2226ff;
+  font-size: 10px;
+  color: #000000;
+  border-radius: 3px;
+  border: 1px solid #000;
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+.square {
+  height: 185px;
+  width: 185px;
+  background-color: white;
+  border: 4px solid black;
+  position: absolute;
+  top: -1px;
+  right: 1px;
+  margin-right: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.square div {
+  border: 4px solid black;
 }
