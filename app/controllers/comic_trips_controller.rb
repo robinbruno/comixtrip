@@ -8,12 +8,12 @@ class ComicTripsController < ApplicationController
   end
 
   def index
-    # show a filtered search on a Grid 2x2 (view)
+    @comic_trips = ComicTrip.all
   end
 
 
   def show
-
+    @comic_trip = ComicTrip.find(params[:id])
   end
 
   def new
