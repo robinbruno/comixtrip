@@ -1,53 +1,40 @@
 <div class="creation-section">
-  <div class="element-container">
-    <button>Background</button>
-    <button class="del-button">Del</button>
-  </div>
-
-  <div class="element-container">
-    <button>Element #1</button>
-    <button class="del-button2">Del</button>
-  </div>
-
-  <div class="element-container">
-    <button>Element #2</button>
-    <button class="del-button">Del</button>
-  </div>
-
-  <div class="publish-container">
-    <button class="publish">Publish</button>
-  </div>
-
-  <div class="rectangle-container">
-    <div class="rectangle" id="rectangle1">Title: <input type="text" id="titleInput" placeholder="Enter title here"></div>
-
-    <div class="rectangle" id="rectangle2">
-      Dialogue #1 <input type="text" id="dialogueInput1" placeholder="Enter your dialogue here">
-      <div><button class="print1">Print!</button></div>
-      <div><button class="none1">None</button></div>
+  <div class="row01">
+    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+      <%= button_tag "Background", type: "button", class: "btn btn-danger" %>
+      <%= button_tag "Left", type: "button", class: "btn btn-warning" %>
+      <%= button_tag "Right", type: "button", class: "btn btn-success" %>
     </div>
+    <%= button_tag "Publish", type: "button", class: "btn btn-light", style: "--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+  </div>
 
-    <div class="rectangle" id="rectangle3">
-      Dialogue #2 <input type="text" id="dialogueInput2" placeholder="Enter your dialogue here">
-      <button class="print2">Print!</button>
-      <button class="none2">None</button>
+<div class="row2" data-controller="dialogue-input">
+  <%= simple_form_for :comix do |f| %>
+    <div class="mb-2">
+      <%= f.input :title, input_html: { placeholder: "Enter your comix Title" }, as: :string, wrapper: false, label: false, data-target="dialogue-input.title" %>
+      <%= f.input :dialogue1, input_html: { placeholder: "Enter your first dialogue" }, as: :string, wrapper: false, label: false, data-target="dialogue-input.dialogue1" %>
+      <%= f.input :dialogue2, input_html: { placeholder: "Enter your second dialogue" }, as: :string, wrapper: false, label: false, data-target="dialogue-input.dialogue2" %>
     </div>
+  <% end %>
+</div>
 
-    <div class="superposed-library">
-      <button class="Library1">Library #1</button>
-      <button class="Library2">Library #2</button>
-      <button class="Library3">Library #3</button>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Library
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Library 1</a></li>
+        <li><a class="dropdown-item" href="#">Library 2</a></li>
+        <li><a class="dropdown-item" href="#">Library 3</a></li>
+      </ul>
     </div>
   </div>
-  <div class="square">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+
+  <div class="row3">
+    <div class="square">
+      <% 9.times do %>
+        <div></div>
+      <% end %>
+    </div>
   </div>
 </div>

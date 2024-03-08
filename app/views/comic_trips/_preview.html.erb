@@ -1,13 +1,13 @@
-<div class="preview-container">
+<div class="preview-container" data-controller="dialogue-input">
   <div class="comic">
-    <div class="comic-title d-none"><h2>Add my title</h2></div>
+    <div class="comic-title" data-target="dialogue-input.title"><h2>Add my title</h2></div>
       <div class="vignettes">
         <div class="vignette-text">
           <div class="element">
           <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1709731493/Classroom1.webp", alt: "Image 1", class: "background-image img-fluid" %>
           </div>
-          <div class="rectangle-left d-none"></div>
-          <div class="rectangle-right d-none"></div>
+          <div class="rectangle-left" data-target="dialogue-input.rectangleLeft"></div>
+          <div class="rectangle-right" data-target="dialogue-input.rectangleRight"></div>
         </div>
         <div class="vignette-text">
           <div class="element">
