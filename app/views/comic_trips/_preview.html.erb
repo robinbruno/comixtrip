@@ -1,28 +1,31 @@
 <div class="preview-container">
-  <h2>Add my title</h2>
   <div class="comic">
-    <div class="vignettes">
-      <div class="vignette">
-      <div>
-        <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731422/Fritz_front_left.png", alt: "Image 1", class: "img-fluid" %>
-      <div class="rectangle-left">lefty</div>
-      <div class="rectangle-right">righty</div>
-      </div>
-      </div>
-      <div class="vignette">
-        <div>
-        <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731428/Teacher_front_right.png", alt: "Image 2", class: "img-fluid" %>
-      <div class="rectangle-left">lefty</div>
-      <div class="rectangle-right">righty</div>
-      </div>
-      </div>
-      <div class="vignette">
-      <div>
-        <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731428/Teacher_front_right.png", alt: "Image 3", class: "img-fluid" %>
-      <div class="rectangle-left">lefty</div>
-      <div class="rectangle-right">righty</div>
-      </div>
+    <div class="comic-title"><h2></h2></div>
+      <div class="vignettes">
+        <div class="vignette-text">
+          <div class="element">
+          <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1709731493/Classroom1.webp", alt: "Image 1", class: "background-image img-fluid" %>
+          </div>
+          <div class="rectangle-left"></div>
+          <div class="rectangle-right"></div>
+        </div>
+        <div class="vignette-text">
+          <div class="element">
+          <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1709731493/Classroom1.webp", alt: "Image 1", class: "background-image img-fluid" %>
+          <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731422/Fritz_front_left.png", alt: "Image 2", class: "overlay-image img-fluid" %>
+          </div>
+          <div class="rectangle-left d-none"></div>
+          <div class="rectangle-right d-none"></div>
+        </div>
+        <div class="vignette-text">
+          <div class="element">
+          <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1709731493/Classroom1.webp", alt: "Image 1", class: "background-image img-fluid" %>
+          <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731422/Fritz_front_left.png", alt: "Image 2", class: "overlay-image img-fluid" %>
+          <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731428/Teacher_front_right.png", alt: "Image 3", class: "overlay-image img-fluid" %>
+          </div>
+          <div class="rectangle-left d-none"></div>
+          <div class="rectangle-right d-none"></div>
+        </div>
       </div>
     </div>
-  </div>
 </div>
