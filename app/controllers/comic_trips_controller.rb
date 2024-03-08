@@ -18,8 +18,6 @@ class ComicTripsController < ApplicationController
 
   def new
     @comic_trips = ComicTrip.new
-    # here we have to work on render 2 partials _preview and _workarea
-
   end
 
   def create
