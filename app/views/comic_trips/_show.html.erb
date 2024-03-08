@@ -1,0 +1,33 @@
+<div class="preview-container">
+  <div class="comic">
+    <div class="comic-title">
+      <h2> <%= comic_trip.title %></h2>
+    </div>
+      <div class="vignettes">
+        <div class="vignette-text">
+          <div class="element">
+        <img src="<%= comic_trip.vignettes[0].compositions[0].element.image_url %>" alt="Vignette1.1" style="position: absolute; z-index: <%= comic_trip.vignettes[0].compositions[0].z_index %>;">
+           </div>
+          <div class="rectangle-left d-none">lefty</div>
+          <div class="rectangle-right d-none">righty</div>
+        </div>
+        </div>
+        <div class="vignette-text">
+          <div class="element">
+        <img src="<%= comic_trip.vignettes[1].compositions[0].element.image_url %>" alt="Vignette2.1" style="position: absolute; z-index: <%= comic_trip.vignettes[1].compositions[0].z_index %>;">
+        <img src="<%= comic_trip.vignettes[1].compositions[1].element.image_url %>" alt="Vignette2.2" style="position: absolute; z-index: <%= comic_trip.vignettes[1].compositions[1].z_index %>;">
+          </div>
+          <div class="rectangle-left">Is anybody here ?</div>
+          <div class="rectangle-right d-none">righty</div>
+        </div>
+        <div class="vignette-text">
+          <div class="element">
+        <img src="<%= comic_trip.vignettes[2].compositions[0].element.image_url %>" alt="Vignette3.1" style="position: absolute; z-index: <%= comic_trip.vignettes[2].compositions[0].z_index %>;">
+        <img src="<%= comic_trip.vignettes[2].compositions[1].element.image_url %>" alt="Vignette3.1" style="position: absolute; z-index: <%= comic_trip.vignettes[2].compositions[1].z_index %>;">
+        <img src="<%= comic_trip.vignettes[2].compositions[2].element.image_url %>" alt="Vignette3.1" style="position: absolute; z-index: <%= comic_trip.vignettes[2].compositions[2].z_index %>;">
+          </div>
+          <div class="rectangle-left">YUHUUUUUUUUU!</div>
+          <div class="rectangle-right">Ya am here !</div>
+        </div>
+  </div>
+</div>

@@ -15,7 +15,7 @@
 //   align-items: center;
 // }
 .comic-title {
-  width: 900px;
+  width: 500px;
   justify-content: center;
   border: 6px solid black;
 }
@@ -34,8 +34,14 @@
   height: 260px;
   background-color: $dark-cyan;
   border: 6px solid black;
+  box-sizing: content-box;
   margin: 10px;
 }
+
+.element img {
+  position: relative;
+}
+
 .background-image, .overlay-image {
   position: absolute;
   top: 0;
@@ -59,4 +65,14 @@
 }
 .img {
   opacity: 0.5;
+}
+
+.background {
+  z-index: 0;
+  position: absolute;
+}
+
+.character {
+  z-index: 1;
+  position: absolute;
 }
