@@ -1,47 +1,45 @@
 .creation-section {
-  background-color: #bb3e03;
-  position: fixed;
-  bottom: 150px;
-  left: 100px;
-  right: 100px;
-  height: 200px;
-  border-radius: 10px;
-  border: 2px solid #000;
+  background-color: #BB3E03;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  border: 6px solid $midnight-green;
+  width: 80%;
+  position: absolute;
 }
-
-.creation-section {
+.row01 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 10px;
 }
-
-.creation-section button {
-  display: inline-block;
-  margin-bottom: 3px;
-  margin-right: 10px;
+.row2 {
+  display: flex;
+  flex-direction: column;
+  justify-content:left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.row3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px auto;
+}
+.btn-group-vertical {
+  display: flex;
+  flex-direction: column;
+}
+.square {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.square div {
+  width: 60px;
+  height: 60px;
   background-color: #ccc;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 11px;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
-.delete-button {
-  margin-left: 1px;
-  font-size: 11px;
-  color: #9b2226;
-  float: right;
-  border-radius: 5px
-}
-
-.big-button {
-  margin-left: 1px;
-  font-size: 11px;
-  color: #9b2226;
-  float: right;
-  border-radius: 2px;
-  border: 2px;
 }
