@@ -11,3 +11,20 @@
 .navbar-lewagon .navbar-brand img {
   width: 60px;
 }
+
+.carousel-background {
+  background-color: #001219ff;
+  padding: 40px;
+  margin: 150px;
+}
+
+.block_carousel .carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-background {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
