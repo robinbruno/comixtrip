@@ -1,0 +1,29 @@
+.header {
+  background-color: #BB3E03;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info img {
+  width: 50px; /* Ajustez la taille de votre photo de profil selon vos besoins */
+  height: 50px;
+  border-radius: 50%; /* Pour obtenir une forme circulaire */
+  margin-right: 10px; /* Espacement entre l'image et le pseudonyme */
+}
+
+.edit-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
