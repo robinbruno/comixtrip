@@ -4,7 +4,7 @@ class ComicTripsController < ApplicationController
   def home
     @comic_trips = ComicTrip.all
     # # randomize the carousel
-    @random_comic_trip = ComicTrip.order("RANDOM()").first
+    # @random_comic_trip = ComicTrip.order("RANDOM()").first
   end
 
   def index

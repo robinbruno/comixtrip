@@ -1,5 +1,23 @@
 <div class="creation-section">
+<<<<<<< HEAD
+  <div class="row01">
+    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+      <%= button_tag "Background", type: "button", class: "btn btn-danger" %>
+      <%= button_tag "Left", type: "button", class: "btn btn-warning" %>
+      <%= button_tag "Right", type: "button", class: "btn btn-success" %>
+    </div>
+    <%= button_tag "Publish", type: "button", class: "btn btn-light", style: "--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
+  </div>
+<div class="row2">
+  <%= simple_form_for :comix do |f| %>
+    <div class="mb-2">
+      <%= f.input :title, input_html: { id: "comix_title", placeholder: "Enter your comix Title" }, as: :string, wrapper: false, label: false %>
+    </div>
+  <% end %>
+</div>
+=======
   <div class="row01" >
+>>>>>>> 323b22910ebf4bed3cf03b4e61ed2c9b9842b589
     <div class="btn-group" role="group">
       <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
     Backgrounds
