@@ -1,9 +1,5 @@
 <div class="creation-section">
   <div class="row01" >
-    <%= simple_form_for :comix do |f| %>
-      <%= f.input :title, input_html: { placeholder: "Enter your comix Title" }, as: :string, wrapper: false, label: false %>
-    <% end %>
-
     <div class="btn-group" role="group">
       <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
     Backgrounds
@@ -33,14 +29,16 @@
         <li><%= link_to "teacher_element_1", "#", class: "dropdown-item" %></li>
       </ul>
     </div>
-    <%= button_tag "Publish", type: "button", class: "btn btn-light", style: "--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
   </div>
+
   <div class="row2">
-    <%= simple_form_for :comix do |f| %>
+  <%= form_with url: "/comics" do |form| %>
     <div class="mb-2">
-      <%= f.input :dialogue1, input_html: { data: { action:"keyup->live-preview#previewText" }, placeholder: "Enter your first dialogue" }, as: :string, wrapper: false, label: false %>
-      <%= f.input :dialogue2, input_html: { placeholder: "Enter your second dialogue" }, as: :string, wrapper: false, label: false%>
+      <%= form.text_field :title, placeholder: "Enter your comix Title", class: "form-control" %>
+      <%= form.text_field :dialogue1, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
+      <%= form.text_field :dialogue2, placeholder: "Enter your second dialogue", class: "form-control" %>
+      <%= form.submit "Publish", class: "btn btn-light" %>
     </div>
-    <% end %>
+  <% end %>
   </div>
 </div>
