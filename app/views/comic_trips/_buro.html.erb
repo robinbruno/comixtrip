@@ -1,4 +1,5 @@
 <div class="creation-section">
+<<<<<<< HEAD
   <div class="row01">
     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
       <%= button_tag "Background", type: "button", class: "btn btn-danger" %>
@@ -14,22 +15,51 @@
     </div>
   <% end %>
 </div>
+=======
+  <div class="row01" >
+>>>>>>> 323b22910ebf4bed3cf03b4e61ed2c9b9842b589
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Library
-      </button>
+      <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+    Backgrounds
+      <% end %>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Library 1</a></li>
-        <li><a class="dropdown-item" href="#">Library 2</a></li>
-        <li><a class="dropdown-item" href="#">Library 3</a></li>
+        <li><%= link_to "background_element", "#", class: "dropdown-item" %></li>
+        <li><%= link_to "background_element_1", "#", class: "dropdown-item" %></li>
+      </ul>
+    </div>
+
+    <div class="btn-group" role="group">
+      <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+    Character #1
+      <% end %>
+      <ul class="dropdown-menu">
+        <li><%= link_to "fritz_element", "#", class: "dropdown-item" %></li>
+        <li><%= link_to "fritz_element_1", "#", class: "dropdown-item" %></li>
+      </ul>
+    </div>
+
+    <div class="btn-group" role="group">
+      <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+    Character #2
+      <% end %>
+      <ul class="dropdown-menu">
+        <li><%= link_to "teacher_element", "#", class: "dropdown-item" %></li>
+        <li><%= link_to "teacher_element_1", "#", class: "dropdown-item" %></li>
       </ul>
     </div>
   </div>
-  <div class="row3">
-    <div class="square">
-      <% 9.times do %>
-        <div></div>
+
+  <div class="row2">
+  <%= form_with model: comic, method: :post do |form| %>
+    <div class="mb-2">
+      <%= form.text_field :title, placeholder: "Enter your comix Title", class: "form-control" %>
+      <%= form.text_field :category, placeholder: "Enter your category", class: "form-control" %>
+      <%= fields_for :vignette1 do |vignette1_form| %>
+        <%= vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
+        <%= vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
       <% end %>
+      <%= form.submit "Publish", class: "btn btn-light" %>
     </div>
+  <% end %>
   </div>
 </div>

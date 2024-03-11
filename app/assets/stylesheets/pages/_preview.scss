@@ -6,27 +6,23 @@
   margin: 20px auto;
   text-align: center;
 }
-// .comic {R
-//   width: 100%;
-//   // height: 330px;
-//   background-color: $gamboge;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+
 .comic-title {
   width: 900px;
   justify-content: center;
   border: 6px solid black;
   margin-left:40px;
 }
+
 .vignettes {
   display: flex;
   justify-content: space-around;
 }
+
 .vignettes-text {
   position: relative;
 }
+
 .element {
   display: flex;
   justify-content: space-around;
@@ -37,11 +33,13 @@
   border: 6px solid black;
   margin: 10px;
 }
+
 .background-image, .overlay-image {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .rectangle-left,
 .rectangle-right {
   width: 260px;
@@ -58,6 +56,7 @@
   margin-right: 5px;
   text-align: left;
 }
+
 .img {
   opacity: 0.5;
 }

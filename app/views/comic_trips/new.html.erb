@@ -1,8 +1,8 @@
-<div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+<div class="container" data-controller="live-preview">
   <div class="preview" style="">
       <%= render 'preview' %>
   </div>
   <div class="buro" style="">
-      <%= render 'buro' %>
+      <%= render 'buro', comic: @comic_trip %>
   </div>
 </div>

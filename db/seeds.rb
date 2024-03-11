@@ -23,6 +23,19 @@ puts "#{User.count} users in database"
 
 # 7 BACKGROUND ELEMENTS:
 
+bg_default = Element.create!(
+  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169219/Comix_trip_material/bg_default_ztoegz.png",
+  category: "background"
+)
+ch_1_default = Element.create!(
+  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169220/Comix_trip_material/ch_1_default_omnb9y.png",
+  category: "background"
+)
+ch_2_default = Element.create!(
+  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169219/Comix_trip_material/bg_default_ztoegz.png",
+  category: "background"
+)
+
 bg_classroom = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/ar_1:1,c_fill,e_art:hokusai,g_auto,w_260/v1709731578/Classroom2.webp",
   category: "background"
@@ -107,7 +120,7 @@ Composition.create!(vignette: vignette3, element: bg_classroom, z_index: 0)
 Composition.create!(vignette: vignette3, element: ch_fritz_element, z_index: 1)
 Composition.create!(vignette: vignette3, element: ch_older_woman_teacher, z_index: 1)
 
-puts "#{comic_trip.title} has been created!"
+puts "#{comic_trip_1.title} has been created!"
 
 # *******
 
