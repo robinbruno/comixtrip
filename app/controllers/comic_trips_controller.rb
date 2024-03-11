@@ -22,12 +22,14 @@ class ComicTripsController < ApplicationController
   def create
     p "hello from comic_trips_controller"
     # vignette1, vignette2, vignette3
+
     @comic_trip = ComicTrip.new(comic_params)
     @vignette1 = Vignette.new(vignette1_params)
     @comic_trip.user = current_user
-    if @comic_trip.save
+
+    # if @comic_trip.save
     if @vignette1.save
-      redirect_to   ,notice: "Vignette was successfully created."
+      # redirect_to   ,notice: "Vignette was successfully created."
 
     else
       render :new, status: :unprocessable_entity
