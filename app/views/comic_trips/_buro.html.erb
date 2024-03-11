@@ -1,37 +1,46 @@
 <div class="creation-section">
-  <div class="row01">
-    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-      <%= button_tag "Background", type: "button", class: "btn btn-danger" %>
-      <%= button_tag "Left", type: "button", class: "btn btn-warning" %>
-      <%= button_tag "Right", type: "button", class: "btn btn-success" %>
+  <div class="row01" >
+    <%= simple_form_for :comix do |f| %>
+      <%= f.input :title, input_html: { placeholder: "Enter your comix Title" }, as: :string, wrapper: false, label: false %>
+    <% end %>
+
+    <div class="btn-group" role="group">
+      <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+    Backgrounds
+      <% end %>
+      <ul class="dropdown-menu">
+        <li><%= link_to "background_element", "#", class: "dropdown-item" %></li>
+        <li><%= link_to "background_element_1", "#", class: "dropdown-item" %></li>
+      </ul>
+    </div>
+
+    <div class="btn-group" role="group">
+      <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+    Character #1
+      <% end %>
+      <ul class="dropdown-menu">
+        <li><%= link_to "fritz_element", "#", class: "dropdown-item" %></li>
+        <li><%= link_to "fritz_element_1", "#", class: "dropdown-item" %></li>
+      </ul>
+    </div>
+
+    <div class="btn-group" role="group">
+      <%= button_tag type: "button", class: "btn btn-primary dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+    Character #2
+      <% end %>
+      <ul class="dropdown-menu">
+        <li><%= link_to "teacher_element", "#", class: "dropdown-item" %></li>
+        <li><%= link_to "teacher_element_1", "#", class: "dropdown-item" %></li>
+      </ul>
     </div>
     <%= button_tag "Publish", type: "button", class: "btn btn-light", style: "--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" %>
   </div>
-<div class="row2">
-  <%= simple_form_for :comix do |f| %>
+  <div class="row2">
+    <%= simple_form_for :comix do |f| %>
     <div class="mb-2">
-      <%= f.input :title, input_html: { placeholder: "Enter your comix Title" }, as: :string, wrapper: false, label: false%>
       <%= f.input :dialogue1, input_html: { data: { action:"keyup->live-preview#previewText" }, placeholder: "Enter your first dialogue" }, as: :string, wrapper: false, label: false %>
       <%= f.input :dialogue2, input_html: { placeholder: "Enter your second dialogue" }, as: :string, wrapper: false, label: false%>
     </div>
-  <% end %>
-</div>
-    <div class="btn-group" role="group">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        Library
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Library 1</a></li>
-        <li><a class="dropdown-item" href="#">Library 2</a></li>
-        <li><a class="dropdown-item" href="#">Library 3</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="row3">
-    <div class="square">
-      <% 9.times do %>
-        <div></div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
 </div>

@@ -1,47 +1,4 @@
-<div class="preview-container">
-  <div class="comic">
-    <div class="comic-title">
-      <h2></h2>
-      <%# h2 above is target from _buro rb 13 ? %>
-      </div>
-      <div class="vignettes">
-        <div class="vignette-text">
-          <div class="element">
-            <%# target from _buro."library"./.. ? %>
-          </div>
-          <div class="rectangle-left" id="rectangle-left1" data-live-preview-target="rectangleLeft1"></div>
-                <%# above is target from _buro rb 14 ? %>
-          <div class="rectangle-right"></div>
-                <%# above is target from _buro rb 15 ? %>
-        </div>
-        <div class="vignette-text">
-          <div class="element">
-            <%# target from _buro."library"./.. ? %>
-          </div>
-          <div class="rectangle-left"></div>
-                <%# above is target from _buro rb 14 ? %>
-          <div class="rectangle-right"></div>
-                <%# above is target from _buro rb 15 ? %>
-        </div>
-        <div class="vignette-text">
-          <div class="element">
-            <%# target from _buro."library"./.. ? %>
-          </div>
-          <div class="rectangle-left"></div>
-                <%# above is target from _buro rb 14 ? %>
-          <div class="rectangle-right"></div>
-                <%# above is target from _buro rb 15 ? %>
-        </div>
-      </div>
-    </div>
-</div>
-
-
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   // Create const from _buro partial
   const inputField = document.querySelector('[id ="titleInput"]');
   // Create const from _preview partial title
@@ -60,10 +17,6 @@
 
       // Remove "d-none" class from emptyField
       emptyField.classList.remove("d-none");
-
-      // if empty again add ("d-none") again
-      // aktiv Print button to send the data somewhere
-      // aktiv button none to erase all
     });
   }
 });
@@ -115,4 +68,7 @@
 });
 
 
-</script>
+
+// app/views/comic_trips/_buro.html
+// app/views/comic_trips/_preview.html
+// and the js file is here : app/javascript/controllers/preview.js
