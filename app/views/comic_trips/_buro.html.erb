@@ -32,16 +32,52 @@
   </div>
 
   <div class="row2">
-  <%= form_with model: comic, method: :post do |form| %>
-    <div class="mb-2">
-      <%= form.text_field :title, placeholder: "Enter your comix Title", class: "form-control" %>
-      <%= form.text_field :category, placeholder: "Enter your category", class: "form-control" %>
-      <%= fields_for :vignette1 do |vignette1_form| %>
-        <%= vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
-        <%= vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
-      <% end %>
-      <%= form.submit "Publish", class: "btn btn-light" %>
-    </div>
-  <% end %>
+<%= form_with model: comic, method: :post do |form| %>
+  <div class="mb-2">
+    <p>Comix</p>
+    <%= form.text_field :title, placeholder: "Enter your comix Title", class: "form-control" %>
+    <%= form.text_field :category, placeholder: "Enter your category", class: "form-control" %>
+
+    <p>Vignette 1</p>
+    <%= fields_for :vignette1 do |vignette1_form| %>
+      <%= vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
+      <%= vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
+    <% end %>
+
+    <p>Elements for Vignette 1</p>
+    <%= fields_for :elements do |element_form| %>
+      <%= element_form.select :element1, Element.all.map { |c| [c.image_url, c.id] } %>
+      <%= element_form.select :element2, Element.all.map { |c| [c.image_url, c.id] } %>
+      <%= element_form.select :element3, Element.all.map { |c| [c.image_url, c.id] } %>
+    <% end %>
+
+     <p>Vignette 2</p>
+    <%= fields_for :vignette2 do |vignette2_form| %>
+      <%= vignette2_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
+      <%= vignette2_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
+    <% end %>
+
+    <p>Elements for Vignette 2</p>
+    <%= fields_for :elements do |element_form| %>
+      <%= element_form.select :element1, Element.all.map { |c| [c.image_url, c.id] } %>
+      <%= element_form.select :element2, Element.all.map { |c| [c.image_url, c.id] } %>
+      <%= element_form.select :element3, Element.all.map { |c| [c.image_url, c.id] } %>
+    <% end %>
+
+     <p>Vignette 3</p>
+    <%= fields_for :vignette3 do |vignette3_form| %>
+      <%= vignette3_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
+      <%= vignette3_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
+    <% end %>
+
+    <p>Elements for Vignette 3</p>
+    <%= fields_for :elements do |element_form| %>
+      <%= element_form.select :element1, Element.all.map { |c| [c.image_url, c.id] } %>
+      <%= element_form.select :element2, Element.all.map { |c| [c.image_url, c.id] } %>
+      <%= element_form.select :element3, Element.all.map { |c| [c.image_url, c.id] } %>
+    <% end %>
+
+    <%= form.submit "Publish", class: "btn btn-light" %>
   </div>
+<% end %>
 </div>
