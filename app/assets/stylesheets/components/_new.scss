@@ -1,7 +1,7 @@
 .container {
   display: flex;
-  flex-direction: column; /* Stacks children vertically */
-  justify-content: center; /* Centers children horizontally in the flex container */
-  align-items: center; /* Centers children vertically in the flex container */
-  height: 100vh; /* Example height, adjust as needed to give the container a specific height */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
