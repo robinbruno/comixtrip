@@ -21,19 +21,26 @@ class ComicTripsController < ApplicationController
 
   def create
     p "hello from comic_trips_controller"
-    # vignette1, vignette2, vignette3
-
     @comic_trip = ComicTrip.new(comic_params)
-    @vignette1 = Vignette.new(vignette1_params)
     @comic_trip.user = current_user
+    @comic_trip.save!
 
-    # if @comic_trip.save
-    if @vignette1.save
-      # redirect_to   ,notice: "Vignette was successfully created."
+    @vignette1 = Vignette.new(vignette1_params)
+    @vignette1.comic_trip = @comic_trip
+    @vignette1.save!
 
-    else
-      render :new, status: :unprocessable_entity
-    end
+    p @comic_trip
+    p @vignette1
+
+
+
+    # # if @comic_trip.save
+    # if @vignette1.save
+    #   # redirect_to   ,notice: "Vignette was successfully created."
+
+    # else
+    #   render :new, status: :unprocessable_entity
+    # end
   end
 
   def update
@@ -47,12 +54,11 @@ class ComicTripsController < ApplicationController
   private
 
   def comic_params
-    params.require(:comic).permit(:title, :dialogue1, :dialogue2)
+    params.require(:comic_trip).permit(:title, :category)
   end
 
   def vignette1_params
-    params.require(:vignette1).permit(:dialogue1, :dialogue2)
-
+    params.require(:vignette1).permit(:text01, :text02)
   end
 
 
