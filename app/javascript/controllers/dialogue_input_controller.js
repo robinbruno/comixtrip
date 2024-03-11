@@ -1,26 +1,30 @@
-// app/javascript/controllers/dialogue_input_controller.js
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ["title", "dialogue1", "dialogue2", "rectangleLeft", "rectangleRight" "dialogueInput"];
 
+  connect() {
+    console.log("hi from dialogue input controller..");
+
+  }
+
+  static targets = ["title", "dialogue1", "dialogue2", "rectangleLeft", "rectangleRight" "dialo gueInput"];
 
   updateTitle(event) {
     console.log("Updating title...");
     const title = event.target.value.trim(); // Get the value from the input field
     const comicTitleTarget = this.comicTitleTarget;
 
-    // If title is empty, add d-none class to comic-title and remove its content
-    // if (title === "") {
-    //   comicTitleTarget.classList.add("d-none");
-    //   comicTitleTarget.innerHTML = "";
-    // } else {
-    //   // Update the content of comic-title with the retrieved value
-    //   comicTitleTarget.innerHTML = `<h2>${title}</h2>`;
+    If title is empty, add d-none class to comic-title and remove its content
+    if (title === "") {
+      comicTitleTarget.classList.add("d-none");
+      comicTitleTarget.innerHTML = "";
+    } else {
+      // Update the content of comic-title with the retrieved value
+      comicTitleTarget.innerHTML = `<h2>${title}</h2>`;
 
-    //   // Remove the d-none class from comic-title
-    //   comicTitleTarget.classList.remove("d-none");
-    // }
+      // Remove the d-none class from comic-title
+      comicTitleTarget.classList.remove("d-none");
+    }
   }
 
 //   updateDialogue1(event) {
