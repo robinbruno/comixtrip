@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_05_162607) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_11_132713) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -84,10 +84,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_162607) do
   end
 
   create_table "vignettes", force: :cascade do |t|
-    t.text "text"
+    t.text "text01"
     t.bigint "comic_trip_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "text02"
     t.index ["comic_trip_id"], name: "index_vignettes_on_comic_trip_id"
   end
 

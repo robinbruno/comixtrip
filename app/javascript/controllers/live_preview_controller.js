@@ -13,6 +13,7 @@ export default class extends Controller {
   };
 
   previewText(event) {
+<<<<<<< HEAD
     this.rectangleLeft1Target.textContent = event.currentTarget.value;
 
   };
@@ -42,3 +43,9 @@ export default class extends Controller {
 
   };
 }
+=======
+      this.rectangleLeft1Target.textContent = event.currentTarget.value;
+      
+    };
+  }
+>>>>>>> 323b22910ebf4bed3cf03b4e61ed2c9b9842b589
