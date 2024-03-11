@@ -29,11 +29,11 @@ bg_default = Element.create!(
 )
 ch_1_default = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169220/Comix_trip_material/ch_1_default_omnb9y.png",
-  category: "background"
+  category: "character"
 )
 ch_2_default = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169219/Comix_trip_material/bg_default_ztoegz.png",
-  category: "background"
+  category: "character"
 )
 
 bg_classroom = Element.create!(
