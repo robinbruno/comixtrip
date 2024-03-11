@@ -107,11 +107,11 @@ class ComicTripsController < ApplicationController
     p @comic_trip
     p @vignette3
 
-    # if @comic_trip.save
-    #   redirect_to @comic_trip, notice: "Comic was successfully created."
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    if @comic_trip.save
+      redirect_to @comic_trip, notice: "Comic was successfully created."
+    else
+      render :new, status: :unprocessable_entity
+    end
 
   end
 
