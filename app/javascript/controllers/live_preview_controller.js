@@ -9,5 +9,6 @@ export default class extends Controller {
 
   previewText(event) {
       this.rectangleLeft1Target.textContent = event.currentTarget.value;
+      
     };
   }
