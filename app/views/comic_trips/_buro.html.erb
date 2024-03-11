@@ -38,7 +38,12 @@
   <div class="row2">
     <%= simple_form_for :comix do |f| %>
     <div class="mb-2">
+<<<<<<< HEAD
       <%= f.input :dialogue1, input_html: { placeholder: "Enter your first dialogue" }, as: :string, wrapper: false, label: false%>
+=======
+      <%= f.input :title, input_html: { placeholder: "Enter your comix Title" }, as: :string, wrapper: false, label: false%>
+      <%= f.input :dialogue1, input_html: { data: { action:"keyup->live-preview#previewText" }, placeholder: "Enter your first dialogue" }, as: :string, wrapper: false, label: false %>
+>>>>>>> master
       <%= f.input :dialogue2, input_html: { placeholder: "Enter your second dialogue" }, as: :string, wrapper: false, label: false%>
     </div>
     <% end %>
