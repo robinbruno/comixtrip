@@ -4,7 +4,7 @@
   <%= form_with model: comic, method: :post do |form| %>
     <div class="mb-2">
     <h2>Create here your 3 Vignettes !</h2>
-    <%= form.text_field :title, placeholder: "Add your comix Title", class: "form-control" %>
+    <%= form.text_field :title, placeholder: "Add your comix Title", class: "form-control", data: { action: "keyup->live-preview#previewTitle" } %>
     <%= form.text_field :category, placeholder: "Add your own category", class: "form-control" %>
     </div>
     </div>
@@ -40,7 +40,7 @@
         <% end %>
         <%= fields_for :vignette1 do |vignette1_form| %>
           <%= vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
-          <%= vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
+          <%= vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText01" } %>
         <% end %>
       </div >
 
@@ -73,8 +73,8 @@
           </div>
         <% end %>
         <%= fields_for :vignette2 do |vignette2_form| %>
-          <%= vignette2_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
-          <%= vignette2_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
+          <%= vignette2_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText02" } %>
+          <%= vignette2_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText03" } %>
         <% end %>
       </div>
 
@@ -107,8 +107,8 @@
             </div>
         <% end %>
         <%= fields_for :vignette3 do |vignette3_form| %>
-          <%= vignette3_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
-          <%= vignette3_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control" %>
+          <%= vignette3_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText04" } %>
+          <%= vignette3_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText05" } %>
         <% end %>
       </div>
     </div>
