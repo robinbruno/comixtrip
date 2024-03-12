@@ -12,7 +12,6 @@
 .comic-title {
   width: 900px;
   justify-content: center;
-  border: 6px solid black;
   margin-left:40px;
 }
 
@@ -47,6 +46,7 @@
   width: 260px;
   background-color: $tiffany-blue;
   border: 2px solid black;
+  border-radius: 2px;
   padding: 5px;
 }
 .rectangle-right {
