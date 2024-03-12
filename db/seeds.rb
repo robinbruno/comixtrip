@@ -23,71 +23,75 @@ puts "#{User.count} users in database"
 
 # 7 BACKGROUND ELEMENTS:
 
-bg_default = Element.create!(
+png_placeholder = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169219/Comix_trip_material/bg_default_ztoegz.png",
-  category: "background"
+  category: "",
+  name: "Placeholder"
 )
-ch_1_default = Element.create!(
-  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169220/Comix_trip_material/ch_1_default_omnb9y.png",
-  category: "background"
-)
-ch_2_default = Element.create!(
-  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169219/Comix_trip_material/bg_default_ztoegz.png",
-  category: "background"
-)
-
 bg_classroom = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/ar_1:1,c_fill,e_art:hokusai,g_auto,w_260/v1709731578/Classroom2.webp",
-  category: "background"
+  category: "background",
+  name: "Classroom"
 )
 bg_science_classroom = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710158553/Comix_trip_material/BG_Science_classroom_qiovf5.webp",
-  category: "background"
+  category: "background",
+  name: "Science Lab"
 )
 bg__schoolbus = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710158552/Comix_trip_material/BG_Schoolbus_beg5o2.webp",
-  category: "background"
+  category: "background",
+  name: "Schoolbus"
 )
 bg_livingroom = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710158551/Comix_trip_material/BG_Livingroom_iptjz9.webp",
-  category: "background"
+  category: "background",
+  name: "Living Room"
 )
 bg_gymnasium = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710158550/Comix_trip_material/BG_Gymnasium_c1x2su.webp",
-  category: "background"
+  category: "background",
+  name: "Gymnasium"
 )
 bg_campfire = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710158550/Comix_trip_material/BG_Campfire_xmjjii.webp",
-  category: "background"
+  category: "background",
+  name: "Camp Fire"
 )
 bg_bedroom = Element.create!(
   image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710158549/Comix_trip_material/BG_Bedroom_gmy4p6.webp",
-  category: "background"
+  category: "background",
+  name: "Bedroom"
 )
 
 
   # CHARACTER #1 ELEMENTS:
   ch_fritz_element = Element.create!(
     image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731422/Comix_trip_material/Fritz_front_left.png",
-    category: "character"
+    category: "character",
+    name: "Fritz"
   )
   ch_fritzette_element = Element.create!(
     image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710163390/Comix_trip_material/ch_fritzette_mllbti.png",
-    category: "character"
+    category: "character",
+    name: "Fritzette"
   )
 
   # CHARACTER #2 ELEMENTS:
   ch_older_man_teacher = Element.create!(
     image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710159777/Comix_trip_material/ch_older_man_teacher_ir3zxk.png",
-    category: "character"
+    category: "character",
+    name: "Mr. Teacher"
   )
   ch_older_woman_teacher = Element.create!(
     image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710159723/Comix_trip_material/ch_older_woman_teacher_ubjmnv.png",
-    category: "character"
+    category: "character",
+    name: "Mrs. Teacher"
   )
   ch_mother_element = Element.create!(
     image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710159772/Comix_trip_material/ch_mother_dvzmwj.png",
-    category: "character"
+    category: "character",
+    name: "Mother"
   )
 
   # *******

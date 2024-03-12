@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   devise_for :users
-  root to: "comic_trips#index"
+  root to: "comic_trips#home"
 
   resources :comic_trips, path: 'comics', only: [:index, :show, :new, :create]
   resources :bookmarks, only: []
