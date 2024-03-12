@@ -1,0 +1,7 @@
+<div id="Element1" class="background-photos-modal" >
+      <% @background_images.each do |image| %>
+        <div data-action="click->live-preview#setVig1Background" id="something">
+          <%= image_tag(image) %>
+        </div>
+      <% end %>
+    </div>

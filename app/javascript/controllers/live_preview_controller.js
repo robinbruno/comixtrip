@@ -2,10 +2,26 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="live-preview"
 export default class extends Controller {
-  static targets = ["rectangleLeft1", "rectangleRight1", "comicTitle", "rectangleLeft2", "rectangleRight2", "rectangleLeft3", "rectangleRight3", "vignetteLeft", "vignetteCenter", "vignetteRight"]
+  static targets = [
+    "rectangleLeft1",
+    "rectangleRight1",
+    "comicTitle",
+    "rectangleLeft2",
+    "rectangleRight2",
+    "rectangleLeft3",
+    "rectangleRight3",
+    "vignetteLeft",
+    "vignetteCenter",
+    "vignetteRight",
+    "vig1Background"
+  ]
 
   connect() {
   }
+
+  setVig1Background(event) {
+    this.vig1BackgroundTarget.value = event.currentTarget //id.of.the.image.we.click};
+  };
 
   previewTitle(event) {
     this.comicTitleTarget.textContent = event.currentTarget.value;
