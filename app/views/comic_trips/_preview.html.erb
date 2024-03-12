@@ -11,108 +11,27 @@
           </div>
           <div class="rectangle-left" id="rectangle-left1" data-live-preview-target="rectangleLeft1"></div>
                 <%# above is target from _buro rb 14 ? %>
-          <div class="rectangle-right"></div>
+          <div class="rectangle-right" id="rectangle-right1" data-live-preview-target="rectangleRight1"></div>
                 <%# above is target from _buro rb 15 ? %>
         </div>
         <div class="vignette-text">
           <div class="element">
             <%# target from _buro."library"./.. ? %>
           </div>
-          <div class="rectangle-left"></div>
+          <div class="rectangle-left" id="rectangle-left2" data-live-preview-target="rectangleLeft2"></div>
                 <%# above is target from _buro rb 14 ? %>
-          <div class="rectangle-right"></div>
+          <div class="rectangle-right" id="rectangle-right2" data-live-preview-target="rectangleRight2"></div>
                 <%# above is target from _buro rb 15 ? %>
         </div>
         <div class="vignette-text">
           <div class="element">
             <%# target from _buro."library"./.. ? %>
           </div>
-          <div class="rectangle-left"></div>
+          <div class="rectangle-left" id="rectangle-left3" data-live-preview-target="rectangleLeft3"></div>
                 <%# above is target from _buro rb 14 ? %>
-          <div class="rectangle-right"></div>
+          <div class="rectangle-right" id="rectangle-right2" data-live-preview-target="rectangleRight2"></div>
                 <%# above is target from _buro rb 15 ? %>
         </div>
       </div>
     </div>
 </div>
-
-
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-  // Create const from _buro partial
-  const inputField = document.querySelector('[id ="titleInput"]');
-  // Create const from _preview partial title
-  const emptyField = document.querySelector('.comic-title');
-
-  if (!inputField) {
-    console.log("Input field empty");
-  } else {
-    // Add event listener to input field on _buro partial
-    inputField.addEventListener('input', function() {
-      // Get the value from _buro partial
-      const inputValue = inputField.value;
-
-      // Write the value to the empty field on _preview
-      emptyField.textContent = inputValue;
-
-      // Remove "d-none" class from emptyField
-      emptyField.classList.remove("d-none");
-
-      // if empty again add ("d-none") again
-      // aktiv Print button to send the data somewhere
-      // aktiv button none to erase all
-    });
-  }
-});
-
-  document.addEventListener("DOMContentLoaded", function() {
-  // Create const from _buro partial
-  const inputField = document.querySelector('[id ="dialogueInput1"]');
-  // Create const from _preview partial title
-  const emptyField = document.querySelector('.rectangle-left');
-
-  if (!inputField) {
-    console.log("Input field empty");
-  } else {
-    // Add event listener to input field on _buro partial
-    inputField.addEventListener('input', function() {
-      // Get the value from _buro partial
-      const inputValue = inputField.value;
-
-      // Write the value to the empty field on _preview
-      emptyField.textContent = inputValue;
-
-      // Remove "d-none" class from emptyField
-      emptyField.classList.remove("d-none");
-    });
-  }
-});
-
-  document.addEventListener("DOMContentLoaded", function() {
-  // Create const from _buro partial
-  const inputField = document.querySelector('[id ="dialogueInput2"]');
-  // Create const from _preview partial title
-  const emptyField = document.querySelector('.rectangle-right');
-
-  if (!inputField) {
-    console.log("Input field empty");
-  } else {
-    // Add event listener to input field on _buro partial
-    inputField.addEventListener('input', function() {
-      // Get the value from _buro partial
-      const inputValue = inputField.value;
-
-      // Write the value to the empty field on _preview
-      emptyField.textContent = inputValue;
-
-      // Remove "d-none" class from emptyField
-      emptyField.classList.remove("d-none");
-    });
-  }
-});
-
-
-</script>
