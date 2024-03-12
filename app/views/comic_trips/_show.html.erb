@@ -9,10 +9,10 @@
         <div class="element">
           <img src="<%= comic_trip.vignettes[0].compositions[0].element.image_url %>" alt="Vignette1.1" style="position: absolute; z-index: <%= comic_trip.vignettes[0].compositions[0].z_index %>;">
         </div>
-          <% unless comic_trip.vignettes[0].text01.empty? %>
+          <% unless comic_trip.vignettes[0].text01.nil? %>
           <div class="rectangle-left"><%= comic_trip.vignettes[0].text01 %></div>
           <% end %>
-          <% unless comic_trip.vignettes[0].text02.empty? %>
+          <% unless comic_trip.vignettes[0].text02.nil? && comic_trip.vignettes[0].text02.empty? %>
           <div class="rectangle-right"><%= comic_trip.vignettes[0].text02 %></div>
           <% end %>
       </div>
@@ -22,10 +22,10 @@
           <img src="<%= comic_trip.vignettes[1].compositions[0].element.image_url %>" alt="Vignette2.1" style="position: absolute; z-index: <%= comic_trip.vignettes[1].compositions[0].z_index %>;">
           <img src="<%= comic_trip.vignettes[1].compositions[1].element.image_url %>" alt="Vignette2.2" style="position: absolute; z-index: <%= comic_trip.vignettes[1].compositions[1].z_index %>;">
         </div>
-          <% unless comic_trip.vignettes[1].text01.empty? %>
+          <% unless comic_trip.vignettes[1].text01.nil? %>
             <div class="rectangle-left"><%= comic_trip.vignettes[1].text01 %></div>
           <% end %>
-          <% unless comic_trip.vignettes[1].text02.empty? %>
+          <% unless comic_trip.vignettes[1].text02.nil? %>
           <div class="rectangle-right"><%= comic_trip.vignettes[1].text02 %></div>
           <% end %>
       </div>
@@ -36,10 +36,10 @@
           <img src="<%= comic_trip.vignettes[2].compositions[1].element.image_url %>" alt="Vignette3.1" style="position: absolute; z-index: <%= comic_trip.vignettes[2].compositions[1].z_index %>;">
           <img src="<%= comic_trip.vignettes[2].compositions[2].element.image_url %>" alt="Vignette3.1" style="position: absolute; z-index: <%= comic_trip.vignettes[2].compositions[2].z_index %>;">
         </div>
-          <% unless comic_trip.vignettes[2].text01.empty? %>
+          <% unless comic_trip.vignettes[2].text01.nil? %>
           <div class="rectangle-left"><%= comic_trip.vignettes[2].text01 %></div>
           <% end %>
-          <% unless comic_trip.vignettes[2].text02.empty? %>
+          <% unless comic_trip.vignettes[2].text02.nil? %>
           <div class="rectangle-right"><%= comic_trip.vignettes[2].text02 %></div>
           <% end %>
       </div>

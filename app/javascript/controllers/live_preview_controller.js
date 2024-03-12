@@ -42,7 +42,3 @@ export default class extends Controller {
 
   };
 }
-      this.rectangleLeft1Target.textContent = event.currentTarget.value;
-
-    };
-  }
