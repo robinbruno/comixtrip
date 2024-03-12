@@ -1,7 +1,9 @@
 .navbar-lewagon {
-  height:70px;
-  justify-content: space-between;
-  background: $auburn;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9b2226ff;
 }
 
 .navbar-lewagon .navbar-collapse {

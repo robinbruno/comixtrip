@@ -1,10 +1,24 @@
-<header class="header">
-<h6></h6>
-  <div class="profile-info">
-    <div class="info">
-      <h1 class="nickname"><%= "#{current_user.nickname}"%></h1>
-      <h2 class="email"><%= "#{current_user.email}" %></h2>
-    </div>
-  </div>
-  <button class="edit-button">Edit</button>
-</header>
+ <h1>Edit profile</h1>
+    <form action="update_profile.php" method="post" enctype="multipart/form-data">
+        <label for="nickname"><%= "Your nickname is #{current_user.nickname}, change for ?" %>:</label>
+        <input type="text" id="nickname" name="nickname"><br><br>
+
+        <label for="email"><%= "Your e-mail address is #{current_user.email}, change for ?" %>:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="button" id="resetPasswordBtn">Reset Password</button><br><br>
+
+        <label for="avatar">Avatar:</label>
+        <input type="file" id="avatar" name="avatar"><br><br>
+
+        <input type="submit" value="Save Changes">
+    </form>
+
+    <form action="delete_account.php" method="post">
+        <input type="submit" value="Delete Account">
+    </form>
+    <script>
+        document.getElementById("resetPasswordBtn").addEventListener("click", function() {
+            alert("Password reset request sent!");
+        });
+    </script>
