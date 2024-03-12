@@ -1,3 +1,5 @@
+ <div class="container">
+  <div class="frame">
  <h1>Edit profile</h1>
     <form action="update_profile.php" method="post" enctype="multipart/form-data">
         <label for="nickname"><%= "Your nickname is #{current_user.nickname}, change for ?" %>:</label>
@@ -17,6 +19,8 @@
     <form action="delete_account.php" method="post">
         <input type="submit" value="Delete Account">
     </form>
+    </div>
+  </div>
     <script>
         document.getElementById("resetPasswordBtn").addEventListener("click", function() {
             alert("Password reset request sent!");

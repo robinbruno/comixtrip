@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.frame {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.frame form {
+  margin-bottom: 20px;
+}
+
+.frame input[type="text"],
+.frame input[type="email"],
+.frame input[type="password"],
+.frame input[type="file"],
+.frame button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.frame input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.frame input[type="submit"]:hover {
+  background-color: #45a049;
+}
