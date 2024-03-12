@@ -1,66 +1,55 @@
 <div class="creation-section">
 
   <div class="row-title-category">
-  <%= form_with model: comic, method: :post do |form| %>
+  <form action="/comics" method="post" >
     <div class="mb-2">
     <h2>Create here your 3 Vignettes !</h2>
-    <%= form.text_field :title, placeholder: "Add your comix Title", class: "form-control", data: { action: "keyup->live-preview#previewTitle" } %>
-    <%= form.text_field :category, placeholder: "Add your own category", class: "form-control" %>
+    <input type="text" name="comic[title]" placeholder="Add your comix Title" class="form-control" data-action="keyup->live-preview#previewTitle" >
+    <input type="text" name="comic[category]" placeholder="Add your own category" class="form-control">
     </div>
     </div>
 
     <div class="row-vignettes">
       <div class="col-vignette-1">
         <h6>Custom your first Vignette !</h6>
-        <%= fields_for :elements do |element_form| %>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-action="click->live-preview#openModal" data-button="background1" aria-expanded="false">
               Background
             </button>
-            <ul class="dropdown-menu">
-              <%= element_form.select :element1, Element.where(category: "background").map { |c| [c.image_url, c.id] } %>
-            </ul>
+            <input type="hidden" name="comic[vig1][background]" data-live-preview-target="vig1Background">
           </div>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-warning btn-sm dropdown-toggle"  data-action="click->live-preview#openModal" data-button="vig1char1" aria-expanded="false">
               Character 1
             </button>
-            <ul class="dropdown-menu">
-              <%= element_form.select :element2, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
-            </ul>
+            <input type="hidden" name="comic[vig1][character1]" data-live-preview-target="vig1Char1">
           </div>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-action="click->live-preview#openModal" data-button="vig1char2" aria-expanded="false">
               Character 2
             </button>
-            <ul class="dropdown-menu">
-              <%= element_form.select :element3, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
-            </ul>
+            <input type="hidden" name="comic[vig1][character2]" data-live-preview-target="vig1Char2">
           </div>
-        <% end %>
-        <%= fields_for :vignette1 do |vignette1_form| %>
-          <%= vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
-          <%= vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText01" } %>
-        <% end %>
+        <%# fields_for :vignette1 do |vignette1_form| %>
+          <%# vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
+          <%# vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText01" } %>
       </div >
 
       <div class="col-vignette-2">
         <h6>Here the second one</h6>
-        <%= fields_for :elements do |element_form| %>
+        <%# fields_for :elements do |element_form| %>
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Background
             </button>
-            <ul class="dropdown-menu">
-              <%= element_form.select :element1, Element.where(category: "background").map { |c| [c.image_url, c.id] } %>
-            </ul>
+            <input type="hidden" name="comic[vig2][background]" data-live-preview-target="vig2Background">
           </div>
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Character 1
             </button>
             <ul class="dropdown-menu">
-              <%= element_form.select :element2, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+              <%# element_form.select :element2, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
             </ul>
           </div>
           <div class="btn-group" role="group">
@@ -68,25 +57,23 @@
               Character 2
             </button>
             <ul class="dropdown-menu">
-              <%= element_form.select :element3, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+              <%# element_form.select :element3, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
             </ul>
           </div>
-        <% end %>
-        <%= fields_for :vignette2 do |vignette2_form| %>
-          <%= vignette2_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText02" } %>
-          <%= vignette2_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText03" } %>
-        <% end %>
+        <%# fields_for :vignette2 do |vignette2_form| %>
+          <%# vignette2_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText02" } %>
+          <%# vignette2_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText03" } %>
       </div>
 
       <div class="col-vignette-3">
         <h6>And finally the last one</h6>
-        <%= fields_for :elements do |element_form| %>
+        <%# fields_for :elements do |element_form| %>
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Background
             </button>
             <ul class="dropdown-menu">
-              <%= element_form.select :element1, Element.where(category: "background").map { |c| [c.image_url, c.id] } %>
+              <%# element_form.select :element1, Element.where(category: "background").map { |c| [c.image_url, c.id] } %>
             </ul>
             </div>
           <div class="btn-group" role="group">
@@ -94,7 +81,7 @@
               Character 1
             </button>
             <ul class="dropdown-menu">
-              <%= element_form.select :element2, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+              <%# element_form.select :element2, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
             </ul>
             </div>
             <div class="btn-group" role="group">
@@ -102,18 +89,16 @@
                 Character 2
               </button>
               <ul class="dropdown-menu">
-              <%= element_form.select :element3, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+              <%# element_form.select :element3, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
               </ul>
             </div>
-        <% end %>
-        <%= fields_for :vignette3 do |vignette3_form| %>
-          <%= vignette3_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText04" } %>
-          <%= vignette3_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText05" } %>
-        <% end %>
+        <%# fields_for :vignette3 do |vignette3_form| %>
+          <%# vignette3_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText04" } %>
+          <%# vignette3_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText05" } %>
       </div>
     </div>
     <div class="row-publish">
-    <%= form.submit "Publish", class: "btn btn-success" %>
-    <% end %>
+    <input type="submit" class="btn btn-success">
+    </form>
     </div>
 </div>

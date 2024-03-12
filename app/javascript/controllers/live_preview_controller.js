@@ -2,9 +2,52 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="live-preview"
 export default class extends Controller {
-  static targets = ["rectangleLeft1", "rectangleRight1", "comicTitle", "rectangleLeft2", "rectangleRight2", "rectangleLeft3", "rectangleRight3", "vignetteLeft", "vignetteCenter", "vignetteRight"]
+  static targets = [
+    "rectangleLeft1",
+    "rectangleRight1",
+    "comicTitle",
+    "rectangleLeft2",
+    "rectangleRight2",
+    "rectangleLeft3",
+    "rectangleRight3",
+    "vignetteLeft",
+    "vignetteCenter",
+    "vignetteRight",
+    "background1",
+    "vig1char1",
+    "vig1char2",
+    "vig1Background",
+    "vig2Background",
+    "vig1Char1",
+    "vig1Char2"
+  ]
 
   connect() {
+  }
+
+  openModal(event) {
+    console.log(event.currentTarget.dataset.button);
+    this[event.currentTarget.dataset.button + 'Target'].classList.remove('d-none');
+  }
+
+  setVig1Background(event) {
+    this.vig1BackgroundTarget.value = event.currentTarget.dataset.imagename //id.of.the.image.we.click};
+    this.background1Target.classList.add('d-none');
+  };
+
+  setVig1Char1(event) {
+    this.vig1Char1Target.value = event.currentTarget.dataset.imagename //id.of.the.image.we.click};
+    this.vig1char1Target.classList.add('d-none');
+  };
+
+  setVig1Char2(event) {
+    this.vig1Char2Target.value = event.currentTarget.dataset.imagename //id.of.the.image.we.click};
+    this.vig1char2Target.classList.add('d-none');
+  };
+
+  setVig2Background(event) {
+    this.vig2BackgroundTarget.value = event.currentTarget.dataset.imagename
+    this.vig2backgroundTarget.classList.add('d-none');
   }
 
   previewTitle(event) {
