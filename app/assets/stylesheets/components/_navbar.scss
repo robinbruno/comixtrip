@@ -13,7 +13,6 @@
 }
 
 .carousel-background {
-  // background-color: #9B2226;
   padding: 40px;
   margin: 150px;
 }
@@ -38,11 +37,11 @@
 }
 
 .carousel-control-prev-icon {
-  color: #005F73;
+  color: $rust !important;
 }
 
 .carousel-control-next-icon {
-  color: #005F73;
+  color: $rust !important;
 }
 
 .nickname {

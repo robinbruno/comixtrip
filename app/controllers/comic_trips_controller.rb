@@ -120,7 +120,8 @@ class ComicTripsController < ApplicationController
   end
 
   def destroy
-
+    @comic_trip.destroy!
+    redirect_to comics_url, notice: "Your Comics Trip was successfully destroyed.", status: :see_other
   end
 
   private
