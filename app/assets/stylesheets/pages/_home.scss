@@ -1,4 +1,87 @@
+// Main and Body
+
+main {
+  min-height: calc(100vh - (70px + 45px));
+}
 
 body {
   background: $vanilla;
+}
+
+// About bubbles...
+
+.bubbles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bubble {
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  color: $rich-black;
+  background-color:aliceblue;
+  border-radius: 10px;
+  border: 2px solid #000;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 30px;
+}
+
+.bubble:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 20px solid transparent;
+  border-top-color: aliceblue;
+  border-bottom: 0;
+  border-left: 0;
+  transform: translateX(-50%);
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+// All about carousel
+
+.carousel-background {
+  padding: 40px;
+  margin: 150px;
+}
+
+.block_carousel .carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-background {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-background {
+  background-image: url('https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709800462/background_carousel_bik3pb.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.carousel-control-prev {
+  color: $rust !important;
+}
+
+.carousel-control-next {
+  color: $rust !important;
+}
+
+.nickname {
+  font-size: 25px;
+  font-weight: bold;
+  color: burlywood;
+  padding-right: 5px;
 }
