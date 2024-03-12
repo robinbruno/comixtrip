@@ -1,5 +1,5 @@
 class ComicTripsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :new, :create, :update ]
+  skip_before_action :authenticate_user!, only: [ :home, :index, :new, :create, :update ]
 
   def home
     @comic_trips = ComicTrip.all
@@ -9,6 +9,10 @@ class ComicTripsController < ApplicationController
 
   def index
     @comic_trips = ComicTrip.all
+    if params[:query].present?
+      sql_subquery = "title ILIKE :query OR author ILIKE :query"
+      @comic_trips = @comic_trips.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show
