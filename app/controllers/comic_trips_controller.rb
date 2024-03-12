@@ -26,7 +26,7 @@ class ComicTripsController < ApplicationController
   end
 
   def create
-    raise
+    
     @comic_trip = ComicTrip.new(comic_params)
     @comic_trip.save!
 
