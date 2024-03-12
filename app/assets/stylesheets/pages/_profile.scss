@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: $auburn;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  padding-right: 5px;
+}
+
+.email {
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-left: 36px;
+}
+
+.edit-button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.my-comics,
+.my-favs {
+  flex: 1;
+  border: 1px solid #363636;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.my-comics {
+
+}
+
+.my-favs {
+
+}

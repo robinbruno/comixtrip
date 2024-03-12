@@ -1,0 +1,21 @@
+<header class="header">
+  <%= image_tag "#{current_user.avatar}", class: "avatar", alt: "dropdown menu" %>
+  <div class="profile-info">
+    <div class="info">
+      <h1 class="nickname"><%= "#{current_user.nickname}"%></h1>
+      <h2 class="email"><%= "#{current_user.email}" %></h2>
+    </div>
+  </div>
+  <button class="edit-button">Edit</button>
+</header>
+
+<div class="main-content">
+    <div class="my-comics">
+    <h2>My Comics</h2>
+
+    </div>
+    <div class="my-favs">
+    <h2>My Favs</h2>
+
+
+    </div>

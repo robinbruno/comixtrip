@@ -14,8 +14,10 @@
   </head>
 
   <body>
+  <% unless controller.controller_name == "pages" && controller.action_name == "profile" %>
     <%= render "shared/navbar" %>
     <%= render "shared/search" %>
+  <% end %>
     <%= render "shared/flashes" %>
     <%= yield %>
     <%= render "shared/footer" %>
