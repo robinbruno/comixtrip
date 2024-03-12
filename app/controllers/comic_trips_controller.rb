@@ -21,10 +21,20 @@ class ComicTripsController < ApplicationController
 
   def new
     @comic_trip = ComicTrip.new
-    @background_images = Element.where(category: "background").pluck(:image_url)
+    @background_elements = Element.where(category: "background")
+    @char_elements = Element.where(category: "character")
   end
 
   def create
+    raise
+    @comic_trip = ComicTrip.new(comic_params)
+    @comic_trip.save!
+
+    @vignette1 = Vignette.new
+    @compVig1Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:background]))
+    @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char1]))
+    @compVig1Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char2]))
+
 
   end
 
