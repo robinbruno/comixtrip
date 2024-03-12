@@ -4,12 +4,12 @@
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
 
-<% @comic_trips.each do |comic_trip| %>
-       <div class="carousel-item active">
-              <%= render partial: "show", locals: {comic_trip: comic_trip} %>
-          </div>
-<% end %>
-          
+        <% @comic_trips.each do |comic_trip| %>
+              <div class="carousel-item active">
+                      <%= render partial: "show", locals: {comic_trip: comic_trip} %>
+                  </div>
+        <% end %>
+
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -1,10 +1,12 @@
 .preview-container {
   width: 1000px;
-  height: 380px;
+  min-height: 400px;
   background-color: white;
   padding: 10px;
   margin: 20px auto;
   text-align: center;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .comic-title {
