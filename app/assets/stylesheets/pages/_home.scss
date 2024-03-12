@@ -16,8 +16,10 @@ body {
 }
 
 .bubble {
-  width: 400px;
-  height: 200px;
+  width: 350px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: $rich-black;
   background-color:aliceblue;
@@ -25,7 +27,6 @@ body {
   border: 2px solid #000;
   position: relative;
   padding: 10px;
-  cursor: pointer;
   transition: transform 0.3s ease;
   margin-top: 30px;
 }
