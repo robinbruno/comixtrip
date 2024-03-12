@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :comic_trips, path: 'comics', only: [:index, :show, :new, :create]
   resources :bookmarks, only: []
+  get "profile", to: "pages#profile"
+  get "edit", to: "pages#edit"
 
   resources :compositions, only: []
   resources :elements, only: []
