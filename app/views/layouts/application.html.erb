@@ -15,9 +15,11 @@
 
   <body>
     <%= render "shared/navbar" %>
+    <main>
     <%= render "shared/search" %>
     <%= render "shared/flashes" %>
     <%= yield %>
+    </main>
     <%= render "shared/footer" %>
   </body>
 </html>

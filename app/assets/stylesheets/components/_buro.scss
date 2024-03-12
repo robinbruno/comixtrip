@@ -24,25 +24,31 @@
     .col-vignette-1{
       background-color: $alloy-orange;
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
       border: 6px dotted $tiffany-blue;
       padding: 5px;
+      margin: 5px;
     }
 
     .col-vignette-2{
       background-color: $rufous;
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
       border: 6px dotted $tiffany-blue;
       padding: 5px;
+      margin: 5px;
     }
 
     .col-vignette-3{
       background-color: $midnight-green;
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
       border: 6px dotted $tiffany-blue;
       padding: 5px;
+      margin: 5px;
     }
   }
 
