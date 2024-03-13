@@ -38,8 +38,6 @@ class ComicTripsController < ApplicationController
     @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char1]))
     @compVig1Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char2]))
 
-    @vignette1.save!
-
     if @comic_trip.save
       redirect_to @comic_trip, notice: "ComiX was successfully created."
     else
