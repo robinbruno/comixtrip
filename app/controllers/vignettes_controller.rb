@@ -3,12 +3,10 @@ class VignettesController < ApplicationController
 
 
   def new
-    @vignette = Vignette.new
+
   end
 
   def create
-    p "hello from Vignette"
-    @vignette = Vignette.new(vignette_params)
 
   end
 
@@ -23,7 +21,7 @@ class VignettesController < ApplicationController
   private
 
   def vignette_params
-    params.require(:vignette).permit(:text)
+
   end
 
 
