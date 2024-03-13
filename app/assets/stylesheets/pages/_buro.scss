@@ -22,10 +22,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .background-grid > div img {
-  max-width: 100%;
+  width: auto;
   height: auto;
 }
