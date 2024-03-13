@@ -4,8 +4,8 @@
   <form action="/comics" method="post" >
     <div class="mb-2">
     <h2>Create here your 3 Vignettes !</h2>
-    <input type="text" name="comic[title]" placeholder="Add your comix Title" class="form-control" data-action="keyup->live-preview#previewTitle" >
-    <input type="text" name="comic[category]" placeholder="Add your own category" class="form-control">
+    <input type="text" name="comic_trip[title]" placeholder="Add your comix Title" class="form-control" data-action="keyup->live-preview#previewTitle" >
+    <input type="text" name="comic_trip[category]" placeholder="Add your own category" class="form-control">
     </div>
     </div>
 
@@ -88,7 +88,6 @@
       </div>
     </div>
     <div class="row-publish">
-    <%= form.submit "Publish", class: "publish-button" %>
-    <% end %>
-    </div>
+    <input type="submit" value="Publish" class="publish-button">
+  </div>
 </div>
