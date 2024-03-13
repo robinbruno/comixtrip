@@ -1,4 +1,4 @@
-<div id="Element1" class="background-photos-modal d-none" data-live-preview-target="vig2char2">
+<div id="Element1" class="background-photos-modal background-grid d-none" data-live-preview-target="vig2char2">
   <% @char_elements.each do |element| %>
     <div data-action="click->live-preview#setVig2Char2" data-imagename="<%= element.name %>">
       <%= image_tag(element.image_url) %>
