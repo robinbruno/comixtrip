@@ -30,9 +30,8 @@
             </button>
             <input type="hidden" name="comic[vig1][character2]" data-live-preview-target="vig1Char2">
           </div>
-        <%# fields_for :vignette1 do |vignette1_form| %>
-          <%# vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
-          <%# vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText01" } %>
+        <input type="text" name="comic[text1]" placeholder="Enter your first dialogue" class="form-control" data-action="keyup->live-preview#previewText" >
+        <input type="text" name="comic[text2]" placeholder="Enter your second dialogue" class="form-control" data-action="keyup->live-preview#previewText02" >
       </div >
 
       <div class="col-vignette-2">
