@@ -43,6 +43,7 @@
 .rectangle-left,
 .rectangle-right {
   width: 260px;
+  word-wrap: break-word;
   background-color: $tiffany-blue;
   border: 2px solid black;
   padding: 5px;

@@ -26,14 +26,24 @@ class ComicTripsController < ApplicationController
   end
 
   def create
+
     @comic_trip = ComicTrip.new(comic_params)
-    @comic_trip.user = current_user
     @comic_trip.save!
+    @comic_trip.user = current_user
+
+    p params
 
     @vignette1 = Vignette.new
     @compVig1Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:background]))
     @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char1]))
     @compVig1Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char2]))
+
+    if @comic_trip.save
+      redirect_to @comic_trip, notice: "ComiX was successfully created."
+    else
+      render :new, status: :unprocessable_entity
+    end
+
   end
 
   def update
@@ -42,7 +52,7 @@ class ComicTripsController < ApplicationController
 
   def destroy
     @comic_trip.destroy!
-    redirect_to comics_url, notice: "Your Comics Trip was successfully destroyed.", status: :see_other
+    redirect_to comics_url, notice: "Your ComiX Trip was successfully destroyed.", status: :see_other
   end
 
   private
