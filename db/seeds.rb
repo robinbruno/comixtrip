@@ -189,15 +189,15 @@ vignette6 = Vignette.create!(
 )
 puts "#{Vignette.count} vignettes were added to the database!"
 
-Composition.create!(vignette: vignette1, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette1, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette1, element: ch_older_man_teacher, z_index: 1)
-Composition.create!(vignette: vignette2, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette2, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette2, element: ch_older_man_teacher, z_index: 1)
-Composition.create!(vignette: vignette3, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette3, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette3, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette4, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette4, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette4, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette5, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette5, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette5, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette6, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette6, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette6, element: ch_older_man_teacher, z_index: 1)
 
 puts "#{comic_trip_2.title} has been created!"
 
@@ -227,15 +227,15 @@ vignette9 = Vignette.create!(
 )
 puts "#{Vignette.count} vignettes were added to the database!"
 
-Composition.create!(vignette: vignette1, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette1, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette1, element: ch_older_woman_teacher, z_index: 1)
-Composition.create!(vignette: vignette2, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette2, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette2, element: ch_older_woman_teacher, z_index: 1)
-Composition.create!(vignette: vignette3, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette3, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette3, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette7, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette7, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette7, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette8, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette8, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette8, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette9, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette9, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette9, element: ch_older_woman_teacher, z_index: 1)
 
 puts "#{comic_trip_3.title} has been created!"
 
@@ -265,15 +265,15 @@ vignette12 = Vignette.create!(
 )
 puts "#{Vignette.count} vignettes were added to the database!"
 
-Composition.create!(vignette: vignette1, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette1, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette1, element: ch_older_man_teacher, z_index: 1)
-Composition.create!(vignette: vignette2, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette2, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette2, element: ch_older_man_teacher, z_index: 1)
-Composition.create!(vignette: vignette3, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette3, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette3, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette10, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette10, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette10, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette11, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette11, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette11, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette12, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette12, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette12, element: ch_older_man_teacher, z_index: 1)
 
 puts "#{comic_trip_4.title} has been created!"
 
@@ -303,15 +303,15 @@ vignette15 = Vignette.create!(
 )
 puts "#{Vignette.count} vignettes were added to the database!"
 
-Composition.create!(vignette: vignette1, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette1, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette1, element: ch_older_woman_teacher, z_index: 1)
-Composition.create!(vignette: vignette2, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette2, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette2, element: ch_older_woman_teacher, z_index: 1)
-Composition.create!(vignette: vignette3, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette3, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette3, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette13, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette13, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette13, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette14, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette14, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette14, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette15, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette15, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette15, element: ch_older_woman_teacher, z_index: 1)
 
 puts "#{comic_trip_5.title} has been created!"
 
@@ -341,15 +341,15 @@ vignette18 = Vignette.create!(
 )
 puts "#{Vignette.count} vignettes were added to the database!"
 
-Composition.create!(vignette: vignette1, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette1, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette1, element: ch_older_man_teacher, z_index: 1)
-Composition.create!(vignette: vignette2, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette2, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette2, element: ch_older_man_teacher, z_index: 1)
-Composition.create!(vignette: vignette3, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette3, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette3, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette16, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette16, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette16, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette17, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette17, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette17, element: ch_older_man_teacher, z_index: 1)
+Composition.create!(vignette: vignette18, element: bg_science_classroom, z_index: 0)
+Composition.create!(vignette: vignette18, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette18, element: ch_older_man_teacher, z_index: 1)
 
 puts "#{comic_trip_6.title} has been created!"
 
@@ -379,14 +379,14 @@ vignette21 = Vignette.create!(
 )
 puts "#{Vignette.count} vignettes were was to the database!"
 
-Composition.create!(vignette: vignette1, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette1, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette1, element: ch_older_woman_teacher, z_index: 1)
-Composition.create!(vignette: vignette2, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette2, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette2, element: ch_older_woman_teacher, z_index: 1)
-Composition.create!(vignette: vignette3, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette3, element: ch_fritz_left_element, z_index: 1)
-Composition.create!(vignette: vignette3, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette19, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette19, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette19, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette20, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette20, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette20, element: ch_older_woman_teacher, z_index: 1)
+Composition.create!(vignette: vignette21, element: bg_classroom, z_index: 0)
+Composition.create!(vignette: vignette21, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette21, element: ch_older_woman_teacher, z_index: 1)
 
 puts "#{comic_trip_7.title} has been created!"
