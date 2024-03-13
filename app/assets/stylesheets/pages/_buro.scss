@@ -6,3 +6,25 @@
   flex-wrap: wrap;
   z-index: 999;
 }
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  transform: translate(38%, -10%);
+}
+
+.background-grid > div {
+  border: 6px solid $midnight-green;
+  background-color: $vanilla;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-grid > div img {
+  width: auto;
+  height: auto;
+}
