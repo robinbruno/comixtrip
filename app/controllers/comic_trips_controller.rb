@@ -58,19 +58,19 @@ class ComicTripsController < ApplicationController
   private
 
   def comic_params
-    params.require(:comic_trip).permit(:title, :category)
+    params.require(:comic_trip).permit(:title, :category, :text01, :text02, :vig1, :vig2, :vig3, )
   end
 
-  def vignette1_params
-    params.require(:vignette1).permit(:text01, :text02)
+  def vig1_params
+    params.require(:vignette1).permit(:background, :character1, :character2)
   end
 
-  def vignette2_params
-    params.require(:vignette2).permit(:text01, :text02)
+  def vig2_params
+    params.require(:vignette2).permit(:background, :character1, :character2)
   end
 
-  def vignette3_params
-    params.require(:vignette3).permit(:text01, :text02)
+  def vig3_params
+    params.require(:vignette3).permit(:background, :character1, :character2)
   end
 
 end
