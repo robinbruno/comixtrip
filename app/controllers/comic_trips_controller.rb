@@ -31,6 +31,8 @@ class ComicTripsController < ApplicationController
     @comic_trip.save!
     @comic_trip.user = current_user
 
+    p params
+
     @vignette1 = Vignette.new
     @compVig1Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:background]))
     @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char1]))

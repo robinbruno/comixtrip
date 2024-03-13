@@ -137,14 +137,17 @@ puts "#{comic_trip_2.title} comic trip was added to the database!"
 
 vignette4 = Vignette.create!(
   text01: "",
+  text02: "Because of the sign",
   comic_trip: comic_trip_2
 )
 vignette5 = Vignette.create!(
   text01: "Is anybody there?",
+  text02: "Because of the sign",
   comic_trip: comic_trip_2
 )
 vignette6 = Vignette.create!(
   text01: "YUHUUUUUUUUU",
+  text02: "Because of the sign",
   comic_trip: comic_trip_2
 )
 puts "#{Vignette.count} vignettes were added to the database!"
@@ -168,15 +171,18 @@ comic_trip_3 = ComicTrip.create!(
 puts "#{comic_trip_3.title} comic trip was added to the database!"
 
 vignette7 = Vignette.create!(
-  text01: "",
+  text01: "Why are you late, Jimmy?",
+  text02: "Because of the sign",
   comic_trip: comic_trip_3
 )
 vignette8 = Vignette.create!(
-  text01: "Is anybody there?",
+  text01: "What sign?",
+  text02: "....",
   comic_trip: comic_trip_3
 )
 vignette9 = Vignette.create!(
-  text01: "YUHUUUUUUUUU",
+  text01: "The one that says, School ahead, go slow!",
+  text02: "AHAHAHHAHAHAHAHAHAHHAHAH",
   comic_trip: comic_trip_3
 )
 puts "#{Vignette.count} vignettes were added to the database!"
@@ -200,15 +206,18 @@ comic_trip_4 = ComicTrip.create!(
 puts "#{comic_trip_4.title} comic trip was added to the database!"
 
 vignette10 = Vignette.create!(
-  text01: "",
+  text01: "Did you hear about the cheese factory that exploded?",
+  text02: "No, what happened?",
   comic_trip: comic_trip_4
 )
 vignette11 = Vignette.create!(
-  text01: "Is anybody there?",
+  text01: "There was nothing left but de-brie.",
+  text02: "uhuhuh",
   comic_trip: comic_trip_4
 )
 vignette12 = Vignette.create!(
-  text01: "YUHUUUUUUUUU",
+  text01: "hihihihihi",
+  text02: "you are so fuc**** hilarious...",
   comic_trip: comic_trip_4
 )
 puts "#{Vignette.count} vignettes were added to the database!"
