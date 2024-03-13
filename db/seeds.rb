@@ -24,12 +24,12 @@ puts "#{User.count} users in database"
 # 7 BACKGROUND ELEMENTS:
 
 png_placeholder = Element.create!(
-  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710169219/Comix_trip_material/bg_default_ztoegz.png",
+  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710232232/Comix_trip_material/vignette_default_ygs7eu.png",
   category: "",
   name: "Placeholder"
 )
 bg_classroom = Element.create!(
-  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/ar_1:1,c_fill,e_art:hokusai,g_auto,w_260/v1709731578/Classroom2.webp",
+  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1709731493/Comix_trip_material/BG_Classroom.webp",
   category: "background",
   name: "Classroom"
 )
@@ -63,18 +63,39 @@ bg_bedroom = Element.create!(
   category: "background",
   name: "Bedroom"
 )
+bg_airport = Element.create!(
+  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710330263/bg_airport_ou3cb8.webp",
+  category: "background",
+  name: "Airport"
+)
+bg_car = Element.create!(
+  image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710330263/bg_car_r4nf5d.webp",
+  category: "background",
+  name: "Car"
+)
 
 
   # CHARACTER #1 ELEMENTS:
-  ch_fritz_element = Element.create!(
-    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709731422/Comix_trip_material/Fritz_front_left.png",
+
+  ch_fritz_left_element = Element.create!(
+    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710331321/ch_fritz_element_g3so1m.png",
     category: "character",
-    name: "Fritz"
+    name: "Fritz left"
   )
-  ch_fritzette_element = Element.create!(
-    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710163390/Comix_trip_material/ch_fritzette_mllbti.png",
+  ch_fritzette_left_element = Element.create!(
+    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710330161/ch_fritzette_element_k8tesm.png",
     category: "character",
-    name: "Fritzette"
+    name: "Fritzette left"
+  )
+  ch_fritz_right_element = Element.create!(
+    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710334353/Fritz_right_element.png.png",
+    category: "character",
+    name: "Fritz right"
+  )
+  ch_fritzette_right_element = Element.create!(
+    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710334358/Fritzette_right_element.png.png",
+    category: "character",
+    name: "Fritzette right"
   )
 
   # CHARACTER #2 ELEMENTS:
@@ -86,12 +107,22 @@ bg_bedroom = Element.create!(
   ch_older_woman_teacher = Element.create!(
     image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710159723/Comix_trip_material/ch_older_woman_teacher_ubjmnv.png",
     category: "character",
-    name: "Mrs. Teacher"
+    name: "Mrs. Teacher1"
+  )
+  ch_woman_teacher = Element.create!(
+    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710159723/Comix_trip_material/ch_older_woman_teacher_ubjmnv.png",
+    category: "character",
+    name: "Mrs. Teacher2"
   )
   ch_mother_element = Element.create!(
-    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/c_pad,w_260,h_260/v1710159772/Comix_trip_material/ch_mother_dvzmwj.png",
+    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710330161/ch_mother__element_fdhhdo.png",
     category: "character",
     name: "Mother"
+  )
+  ch_father_element = Element.create!(
+    image_url: "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1710330161/ch_father_element_qevvkn.png",
+    category: "character",
+    name: "Father"
   )
 
   # *******
@@ -119,9 +150,9 @@ bg_bedroom = Element.create!(
 
 Composition.create!(vignette: vignette1, element: bg_classroom, z_index: 0)
 Composition.create!(vignette: vignette2, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette2, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette2, element: ch_fritz_left_element, z_index: 1)
 Composition.create!(vignette: vignette3, element: bg_classroom, z_index: 0)
-Composition.create!(vignette: vignette3, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette3, element: ch_fritz_left_element, z_index: 1)
 Composition.create!(vignette: vignette3, element: ch_older_woman_teacher, z_index: 1)
 
 puts "#{comic_trip_1.title} has been created!"
@@ -154,9 +185,9 @@ puts "#{Vignette.count} vignettes were added to the database!"
 
 Composition.create!(vignette: vignette4, element: bg_science_classroom, z_index: 0)
 Composition.create!(vignette: vignette5, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette5, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette5, element: ch_fritz_left_element, z_index: 1)
 Composition.create!(vignette: vignette6, element: bg_science_classroom, z_index: 0)
-Composition.create!(vignette: vignette6, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette6, element: ch_fritz_left_element, z_index: 1)
 Composition.create!(vignette: vignette6, element: ch_older_woman_teacher, z_index: 1)
 
 puts "#{comic_trip_2.title} has been created!"
@@ -189,10 +220,10 @@ puts "#{Vignette.count} vignettes were added to the database!"
 
 Composition.create!(vignette: vignette7, element: bg__schoolbus, z_index: 0)
 Composition.create!(vignette: vignette8, element: bg__schoolbus, z_index: 0)
-Composition.create!(vignette: vignette8, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette8, element: ch_fritz_left_element, z_index: 1)
 Composition.create!(vignette: vignette9, element: bg__schoolbus, z_index: 0)
-Composition.create!(vignette: vignette9, element: ch_fritz_element, z_index: 1)
-Composition.create!(vignette: vignette9, element: ch_fritzette_element, z_index: 1)
+Composition.create!(vignette: vignette9, element: ch_fritz_left_element, z_index: 1)
+Composition.create!(vignette: vignette9, element: ch_fritzette_right_element, z_index: 1)
 
 puts "#{comic_trip_3.title} has been created!"
 
@@ -224,9 +255,9 @@ puts "#{Vignette.count} vignettes were added to the database!"
 
 Composition.create!(vignette: vignette10, element: bg_livingroom, z_index: 0)
 Composition.create!(vignette: vignette11, element: bg_livingroom, z_index: 0)
-Composition.create!(vignette: vignette11, element: ch_fritzette_element, z_index: 1)
+Composition.create!(vignette: vignette11, element: ch_fritzette_left_element, z_index: 1)
 Composition.create!(vignette: vignette12, element: bg_livingroom, z_index: 0)
-Composition.create!(vignette: vignette12, element: ch_fritzette_element, z_index: 1)
+Composition.create!(vignette: vignette12, element: ch_fritzette_left_element, z_index: 1)
 Composition.create!(vignette: vignette12, element: ch_mother_element, z_index: 1)
 
 puts "#{comic_trip_4.title} has been created!"
@@ -256,9 +287,9 @@ puts "#{Vignette.count} vignettes were added to the database!"
 
 Composition.create!(vignette: vignette13, element: bg_gymnasium, z_index: 0)
 Composition.create!(vignette: vignette14, element: bg_gymnasium, z_index: 0)
-Composition.create!(vignette: vignette14, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette14, element: ch_fritz_left_element, z_index: 1)
 Composition.create!(vignette: vignette15, element: bg_gymnasium, z_index: 0)
-Composition.create!(vignette: vignette15, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette15, element: ch_fritz_left_element, z_index: 1)
 Composition.create!(vignette: vignette15, element: ch_older_man_teacher, z_index: 1)
 
 puts "#{comic_trip_5.title} has been created!"
@@ -288,10 +319,10 @@ puts "#{Vignette.count} vignettes were added to the database!"
 
 Composition.create!(vignette: vignette16, element: bg_campfire, z_index: 0)
 Composition.create!(vignette: vignette17, element: bg_campfire, z_index: 0)
-Composition.create!(vignette: vignette17, element: ch_fritz_element, z_index: 1)
+Composition.create!(vignette: vignette17, element: ch_fritz_right_element, z_index: 1)
 Composition.create!(vignette: vignette18, element: bg_campfire, z_index: 0)
-Composition.create!(vignette: vignette18, element: ch_fritz_element, z_index: 1)
-Composition.create!(vignette: vignette18, element: ch_fritzette_element, z_index: 1)
+Composition.create!(vignette: vignette18, element: ch_fritz_right_element, z_index: 1)
+Composition.create!(vignette: vignette18, element: ch_fritzette_left_element, z_index: 1)
 
 puts "#{comic_trip_6.title} has been created!"
 
@@ -320,9 +351,9 @@ puts "#{Vignette.count} vignettes were was to the database!"
 
 Composition.create!(vignette: vignette19, element: bg_bedroom, z_index: 0)
 Composition.create!(vignette: vignette20, element: bg_bedroom, z_index: 0)
-Composition.create!(vignette: vignette20, element: ch_fritzette_element, z_index: 1)
+Composition.create!(vignette: vignette20, element: ch_fritzette_left_element, z_index: 1)
 Composition.create!(vignette: vignette21, element: bg_bedroom, z_index: 0)
-Composition.create!(vignette: vignette21, element: ch_fritzette_element, z_index: 1)
+Composition.create!(vignette: vignette21, element: ch_fritzette_left_element, z_index: 1)
 Composition.create!(vignette: vignette21, element: ch_mother_element, z_index: 1)
 
 puts "#{comic_trip_7.title} has been created!"
