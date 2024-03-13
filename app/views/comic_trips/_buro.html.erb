@@ -30,31 +30,34 @@
             </button>
             <input type="hidden" name="comic[vig1][character2]" data-live-preview-target="vig1Char2">
           </div>
-        <%# fields_for :vignette1 do |vignette1_form| %>
-          <%# vignette1_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText" } %>
-          <%# vignette1_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText01" } %>
+        <input type="text" name="comic[text1]" placeholder="Enter your first dialogue" class="form-control" data-action="keyup->live-preview#previewText" >
+        <input type="text" name="comic[text2]" placeholder="Enter your second dialogue" class="form-control" data-action="keyup->live-preview#previewTitle" >
       </div >
 
       <div class="col-vignette-2">
         <h6>Here the second one</h6>
         <%# fields_for :elements do |element_form| %>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-action="click->live-preview#openModal" data-button="background2" aria-expanded="false">
+            <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Background
             </button>
             <input type="hidden" name="comic[vig2][background]" data-live-preview-target="vig2Background">
           </div>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-warning btn-sm dropdown-toggle"  data-action="click->live-preview#openModal" data-button="vig2char1" aria-expanded="false">
+            <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Character 1
             </button>
-            <input type="hidden" name="comic[vig2][character1]" data-live-preview-target="vig2Char1">
+            <ul class="dropdown-menu">
+              <%# element_form.select :element2, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+            </ul>
           </div>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-action="click->live-preview#openModal" data-button="vig2char2" aria-expanded="false">
+            <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Character 2
             </button>
-            <input type="hidden" name="comic[vig2][character2]" data-live-preview-target="vig2Char2">
+            <ul class="dropdown-menu">
+              <%# element_form.select :element3, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+            </ul>
           </div>
         <%# fields_for :vignette2 do |vignette2_form| %>
           <%# vignette2_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText02" } %>
@@ -65,30 +68,36 @@
         <h6>And finally the last one</h6>
         <%# fields_for :elements do |element_form| %>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-action="click->live-preview#openModal" data-button="background3" aria-expanded="false">
+            <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Background
             </button>
-            <input type="hidden" name="comic[vig3][background]" data-live-preview-target="vig3Background">
-          </div>
+            <ul class="dropdown-menu">
+              <%# element_form.select :element1, Element.where(category: "background").map { |c| [c.image_url, c.id] } %>
+            </ul>
+            </div>
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-warning btn-sm dropdown-toggle"  data-action="click->live-preview#openModal" data-button="vig3char1" aria-expanded="false">
+            <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Character 1
             </button>
-            <input type="hidden" name="comic[vig3][character1]" data-live-pgit review-target="vig3Char1">
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-action="click->live-preview#openModal" data-button="vig3char2" aria-expanded="false">
-              Character 2
-            </button>
-            <input type="hidden" name="comic[vig3][character2]" data-live-preview-target="vig3Char2">
-          </div>
+            <ul class="dropdown-menu">
+              <%# element_form.select :element2, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+            </ul>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Character 2
+              </button>
+              <ul class="dropdown-menu">
+              <%# element_form.select :element3, Element.where(category: "character").map { |c| [c.image_url, c.id] } %>
+              </ul>
+            </div>
         <%# fields_for :vignette3 do |vignette3_form| %>
           <%# vignette3_form.text_field :text01, placeholder: "Enter your first dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText04" } %>
           <%# vignette3_form.text_field :text02, placeholder: "Enter your second dialogue", class: "form-control", data: { action: "keyup->live-preview#previewText05" } %>
       </div>
     </div>
     <div class="row-publish">
-    <%= form.submit "Publish", class: "publish-button" %>
-    <% end %>
+    <input type="submit" class="btn btn-success">
+    </form>
     </div>
 </div>
