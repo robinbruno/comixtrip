@@ -46,7 +46,7 @@ class ComicTripsController < ApplicationController
 
     p "Vignette 2"
 
-    @vignette2 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text1], text02: params[:comic][:text2])
+    @vignette2 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text3], text02: params[:comic][:text4])
     @vignette2.save!
 
     @compVig2Ele1 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: params[:comic][:vig2][:background]).id)
@@ -58,14 +58,14 @@ class ComicTripsController < ApplicationController
 
     p "Vignette 3"
 
-    @vignette3 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text1], text02: params[:comic][:text2])
+    @vignette3 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text5], text02: params[:comic][:text6])
     @vignette3.save!
 
-    @compVig3Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig3][:background]).id)
+    @compVig3Ele1 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:background]).id)
     @compVig3Ele1.save!
-    @compVig3Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig3][:character1]).id)
+    @compVig3Ele2 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:character1]).id)
     @compVig3Ele2.save!
-    @compVig3Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig3][:character2]).id)
+    @compVig3Ele3 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:character2]).id)
     @compVig3Ele3.save!
 
     if @comic_trip.save
