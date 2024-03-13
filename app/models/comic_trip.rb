@@ -3,5 +3,5 @@ class ComicTrip < ApplicationRecord
   has_many :albums, through: :album_comic_trips
   has_many :vignettes
   has_many :bookmarks
-
+ 
 end
