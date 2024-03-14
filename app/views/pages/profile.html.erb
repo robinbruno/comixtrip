@@ -1,56 +1,29 @@
-<div class="toggling" data-controller="toggle">
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div class="container-fluid">
-      <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709649745/ComixBnB/comix_trip_logo_staple_euqeny.png" %>
-      <% end %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div>
-        <h2 class="nickname active mt-1">
-          <%= "#{current_user.nickname}" %>
-          <h5 br>
-          <%= "#{current_user.email}" %>
-          </h5>
-        </h2>
-      </div>
+<div class="container">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <% if user_signed_in? %>
-            <!-- 💭 link -->
-            <li class="nav-item">
-              <%= link_to "💭", new_comic_trip_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= image_tag "#{current_user.avatar}", class: "avatar", alt: "dropdown menu" %>
-              </a>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-              </div>
-            </li>
-            <li class="nav-item">
-              <%= link_to edit_user_registration_path, class: "nav-link edit-button" do %>
-                Edit
-              <% end %>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to new_user_session_path, class: "nav-link navbar-brand" do %>
-                <%= image_tag "https://res.cloudinary.com/dlmpwvjpw/image/upload/v1709720639/Comix_Trip_Nav_Button_Square_luhrk4.png", alt: "Login" %>
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div>
+  <h2 class="nickname active mt-1">
+    <%= "#{current_user.nickname}" %>
+    <h5 br>
+    <%= "#{current_user.email}" %>
+    </h5>
+  </h2>
 </div>
 
-<div class="main-content">
-  <div class="my-comics">
-    <h2>My Comics</h2>
+<%= link_to edit_user_registration_path, class: "nav-link edit-button" do %>
+  Edit
+<% end %>
+
+  <div class="row">
+<% if @comic_trips.any? %>
+  <% @comic_trips.each do |comic_trip| %>
+    <div class="col-12 sm-8 my-3">
+      <%= render 'comic_trips/show', comic_trip: comic_trip %>
+    </div>
+  <% end %>
+<% else %>
+  <em>Sorry, no comiXtrip found.</em>
+<% end %>
+
   </div>
+<%= link_to "Back to Home", root_path, class: "btn btn-info btn-custom" %>
 </div>
