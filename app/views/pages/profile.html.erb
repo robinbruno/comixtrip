@@ -3,15 +3,22 @@
 <div>
   <h2 class="nickname active mt-1">
     <%= "#{current_user.nickname}" %>
-    <h5 br>
+    </h2>
+    <h5 class="emailprofile" br>
     <%= "#{current_user.email}" %>
     </h5>
-  </h2>
-</div>
-
-<%= link_to edit_user_registration_path, class: "nav-link edit-button" do %>
+    <h6>
+    <%= "#{current_user.first_name}" %>
+    </h6>
+    <h6>
+    <%= "#{current_user.last_name}" %>
+    </h6>
+      <div>
+    <%= link_to edit_user_registration_path, class: "nav-link edit-button" do %>
   Edit
 <% end %>
+  </div>
+</div>
 
   <div class="row">
 <% if @comic_trips.any? %>
@@ -25,5 +32,5 @@
 <% end %>
 
   </div>
-<%= link_to "Back to Home", root_path, class: "btn btn-info btn-custom" %>
+<%= link_to "Back to Home", root_path, class: "btn btn-info btn-custom backhome" %>
 </div>
