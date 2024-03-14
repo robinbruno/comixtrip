@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :bookmarks, only: []
   get "profile", to: "pages#profile"
   get "edit", to: "pages#edit"
+  get "qrcode", to: "pages#qrcode"
+  get "news", to: "pages#news"
 
   resources :compositions, only: []
   resources :elements, only: []
