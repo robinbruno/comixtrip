@@ -104,8 +104,8 @@
 .backhome {
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
+    left: 30px;
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
     background-color: red; /* Set a background color */
@@ -118,4 +118,22 @@
 
   .backhome {
     background-color: #555; /* Add a dark-grey background on hover */
+  }
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px; /* Ajustez cette valeur pour positionner le bouton sur le côté droit */
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: blue; /* Définissez une couleur de fond */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  .scroll-top:hover {
+    background-color: darkblue;
   }
