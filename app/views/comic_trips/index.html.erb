@@ -2,10 +2,8 @@
   <div class="row">
 <% if @comic_trips.any? %>
   <% @comic_trips.each do |comic_trip| %>
-    <div class="col-6 sm-8 my-3">
-      <h6>Title: <%= comic_trip.title %></h6>
-      <h6>Nickname: <%= comic_trip.user.nickname %></h6>
-      <%= render 'comic_partial', comic_trip: comic_trip %>
+    <div class="col-12 sm-8 my-3">
+      <%= render 'show', comic_trip: comic_trip %>
     </div>
   <% end %>
 <% else %>
