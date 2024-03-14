@@ -1,15 +1,17 @@
 <div class="container">
+  <% unless user_signed_in? %>
   <div class="bubbles">
-  <div class="bubble">
-    <span class="bubble-text"><h1>hey you wanna have a laugh ?</h1></span>
+    <div class="bubble">
+      <span class="bubble-text"><h1>hey you wanna have a laugh ?</h1></span>
+    </div>
+    <div class="bubble">
+      <span class="bubble-text"><h1>Sign-up first :)</h1></span>
+    </div>
+    <div class="bubble">
+      <span class="bubble-text"><h1>...and create your first ComiXtrip!</h1></span>
+    </div>
   </div>
-  <div class="bubble">
-    <span class="bubble-text"><h1>Sign-up first :)</h1></span>
-  </div>
-  <div class="bubble">
-    <span class="bubble-text"><h1>...and create your first ComiXtrip!</h1></span>
-  </div>
-</div>
+  <% end %>
 </div>
   <div class="carousel-background mt-5">
     <div class="block_carousel mt-4" >
