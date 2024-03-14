@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "comic_trips#home"
 
-  resources :comic_trips, path: 'comics', only: [:index, :show, :new, :create]
+  resources :comic_trips, path: 'comics', only: [:index, :show, :new, :create ]
   resources :bookmarks, only: []
   get "profile", to: "pages#profile"
   get "edit", to: "pages#edit"
