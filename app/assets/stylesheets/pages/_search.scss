@@ -1,0 +1,89 @@
+$dark-cyan: #008b8b;
+$vanilla: #f3e5ab;
+
+.preview-container {
+  width: 1000px;
+  background-color: white;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+.comic-title {
+  width: 900px;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  width: calc(50% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.vignettes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vignette-text {
+  position: relative;
+  max-width: 100%; /* Set maximum width for each vignette */
+}
+
+.element {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 260px;
+  background-color: $dark-cyan;
+  border: 6px solid black;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.background-image, .overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rectangle-left,
+.rectangle-right {
+  width: 100%;
+  max-width: 300px;
+  word-wrap: break-word;
+  background-color: $dark-cyan;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+.rectangle-right {
+  background-color: $vanilla;
+  margin-top: 10px;
+  text-align: right;
+}
+.rectangle-left {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.img {
+  opacity: 0.5;
+}
+
+.adapt {
+  width: 100%;
+}
