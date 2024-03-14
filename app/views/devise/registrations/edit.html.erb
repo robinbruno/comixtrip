@@ -29,10 +29,10 @@
             <%= f.input :password,
                         label: "New Password",
                         hint: "leave it blank if you don't want to change it",
-                        required: false,
+                        required: true,
                         input_html: { autocomplete: "new-password" } %>
             <%= f.input :password_confirmation,
-                        required: false,
+                        required: true,
                         input_html: { autocomplete: "new-password" } %>
           </div>
 
