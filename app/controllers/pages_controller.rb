@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @comic_trips = ComicTrip.where(user: current_user)
+    @comic_trips = ComicTrip.where(user: current_user).order(created_at: :desc)
   end
 end
