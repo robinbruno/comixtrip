@@ -40,14 +40,18 @@ export default class extends Controller {
     "vig3BackgroundImage",
     "vig3Char1Image",
     "vig3Char2Image", // KALEK (ajouter)
+    "closeScreen"
   ]
 
   connect() {
   }
 
   openModal(event) {
-    console.log(event.currentTarget.dataset.button);
     this[event.currentTarget.dataset.button + 'Target'].classList.remove('d-none');
+  };
+
+  closeModal() {
+    
   }
 
   setVig1Background(event) {
