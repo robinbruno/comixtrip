@@ -2,7 +2,7 @@ class ComicTripsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :index, :create, :update ]
 
   def home
-    @comic_trips = ComicTrip.all
+    @comic_trips = ComicTrip.all.order(created_at: :desc)
     # # randomize the carousel
     # @random_comic_trip = ComicTrip.order("RANDOM()").first
   end
