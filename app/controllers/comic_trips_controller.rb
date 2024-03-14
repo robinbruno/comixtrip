@@ -1,5 +1,5 @@
 class ComicTripsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :index, :new, :create, :update ]
+  skip_before_action :authenticate_user!, only: [ :home, :index, :create, :update ]
 
   def home
     @comic_trips = ComicTrip.all
@@ -27,16 +27,46 @@ class ComicTripsController < ApplicationController
 
   def create
 
+    p "hello from comic_trips_controller-create"
     @comic_trip = ComicTrip.new(comic_params)
-    @comic_trip.save!
     @comic_trip.user = current_user
+    @comic_trip.save!
 
-    p params
+    p "Vignette 1"
 
-    @vignette1 = Vignette.new
-    @compVig1Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:background]))
-    @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char1]))
-    @compVig1Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.where(name: params[:comic][:vig1][:char2]))
+    @vignette1 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text1], text02: params[:comic][:text2])
+    @vignette1.save!
+
+    @compVig1Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig1][:background]).id)
+    @compVig1Ele1.save!
+    @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig1][:character1]).id)
+    @compVig1Ele2.save!
+    @compVig1Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig1][:character2]).id)
+    @compVig1Ele3.save!
+
+    p "Vignette 2"
+
+    @vignette2 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text3], text02: params[:comic][:text4])
+    @vignette2.save!
+
+    @compVig2Ele1 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: params[:comic][:vig2][:background]).id)
+    @compVig2Ele1.save!
+    @compVig2Ele2 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: params[:comic][:vig2][:character1]).id)
+    @compVig2Ele2.save!
+    @compVig2Ele3 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: params[:comic][:vig2][:character2]).id)
+    @compVig2Ele3.save!
+
+    p "Vignette 3"
+
+    @vignette3 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text5], text02: params[:comic][:text6])
+    @vignette3.save!
+
+    @compVig3Ele1 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:background]).id)
+    @compVig3Ele1.save!
+    @compVig3Ele2 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:character1]).id)
+    @compVig3Ele2.save!
+    @compVig3Ele3 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:character2]).id)
+    @compVig3Ele3.save!
 
     if @comic_trip.save
       redirect_to @comic_trip, notice: "ComiX was successfully created."
@@ -58,19 +88,19 @@ class ComicTripsController < ApplicationController
   private
 
   def comic_params
-    params.require(:comic_trip).permit(:title, :category)
+    params.require(:comic_trip).permit(:title, :category, :vig1, :vig2, :vig3)
   end
 
-  def vignette1_params
-    params.require(:vignette1).permit(:text01, :text02)
-  end
+  # def vig1_params
+  #   params.require(:vignette1).permit(:background, :character1, :character2, :text01, :text02)
+  # end
 
-  def vignette2_params
-    params.require(:vignette2).permit(:text01, :text02)
-  end
+  # def vig2_params
+  #   params.require(:vignette2).permit(:background, :character1, :character2, :text01, :text02)
+  # end
 
-  def vignette3_params
-    params.require(:vignette3).permit(:text01, :text02)
-  end
+  # def vig3_params
+  #   params.require(:vignette3).permit(:background, :character1, :character2, :text01, :text02)
+  # end
 
 end
