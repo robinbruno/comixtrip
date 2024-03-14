@@ -14,3 +14,33 @@
   width: 60px;
 }
 
+  .button-container {
+    display: flex; // Use flexbox
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    background-image: url('https://res.cloudinary.com/dlmpwvjpw/image/upload/c_crop,ar_16:9/v1710426450/Bubble_ekydch.png'); // Replace with your image URL
+    background-size: cover; // Cover the entire div area
+    width: 100px; // Set the width of your button
+    height: 60px; // Set the height of your button
+    border: none; // Optional: removes the border
+    color: $midnight-green; // Set the text color
+    font-size: 20px; // Set the text size
+    cursor: pointer; // Change cursor on hover
+    text-decoration: none; // Remove underline from links if any
+
+
+    a.button-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; // Make the link fill the container
+      height: 100%; // Make the link fill the container
+      color: rgb(23, 20, 20); // Text color
+      text-decoration: none; // Remove underline from the link
+      // Add more styles as needed
+    }
+    
+  &:hover {
+    background-color: rgba(101, 17, 17, 0.1); // Example hover effect
+  }
+}
