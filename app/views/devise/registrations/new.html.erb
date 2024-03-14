@@ -20,10 +20,6 @@
                             required: true,
                             autofocus: true,
                             input_html: { autocomplete: "email" }%>
-                <%= f.input :password_confirmation,
-                            label: "Credit Card Number (lol)",
-                            required: false,
-                            input_html: { placeholder: "0000-0000-0000-0000" } %>
                 <%= f.input :password,
                             required: true,
                             hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
