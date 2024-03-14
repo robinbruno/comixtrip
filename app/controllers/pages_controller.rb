@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def profile
+    @comic_trips = ComicTrip.where(user: current_user)
+  end
 end

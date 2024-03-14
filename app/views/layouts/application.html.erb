@@ -14,11 +14,9 @@
   </head>
 
   <body>
-  <% unless controller.controller_name == "pages" && controller.action_name == "profile" %>
     <%= render "shared/navbar" %>
     <main>
     <%= render "shared/search" %>
-  <% end %>
     <%= render "shared/flashes" %>
     <div style="min-height: 94vh">
     <%= yield %>
