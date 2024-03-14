@@ -37,11 +37,16 @@ class ComicTripsController < ApplicationController
     @vignette1 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text1], text02: params[:comic][:text2])
     @vignette1.save!
 
-    @compVig1Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig1][:background]).id)
+    name = params[:comic][:vig1][:background] # Danger: can be "", in which case we want to take the "Placeholder"
+    @compVig1Ele1 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig1Ele1.save!
-    @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig1][:character1]).id)
+
+    name = params[:comic][:vig1][:character1]
+    @compVig1Ele2 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig1Ele2.save!
-    @compVig1Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: params[:comic][:vig1][:character2]).id)
+
+    name = params[:comic][:vig1][:character2]
+    @compVig1Ele3 = Composition.new(vignette_id: @vignette1.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig1Ele3.save!
 
     p "Vignette 2"
@@ -49,11 +54,16 @@ class ComicTripsController < ApplicationController
     @vignette2 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text3], text02: params[:comic][:text4])
     @vignette2.save!
 
-    @compVig2Ele1 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: params[:comic][:vig2][:background]).id)
+    name = params[:comic][:vig2][:background] # Danger: can be "", in which case we want to take the "Placeholder"
+    @compVig2Ele1 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig2Ele1.save!
-    @compVig2Ele2 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: params[:comic][:vig2][:character1]).id)
+
+    name = params[:comic][:vig2][:character1] # Danger: can be "", in which case we want to take the "Placeholder"
+    @compVig2Ele2 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig2Ele2.save!
-    @compVig2Ele3 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: params[:comic][:vig2][:character2]).id)
+
+    name = params[:comic][:vig2][:character2] # Danger: can be "", in which case we want to take the "Placeholder"
+    @compVig2Ele3 = Composition.new(vignette_id: @vignette2.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig2Ele3.save!
 
     p "Vignette 3"
@@ -61,11 +71,16 @@ class ComicTripsController < ApplicationController
     @vignette3 = Vignette.new(comic_trip_id:@comic_trip.id, text01: params[:comic][:text5], text02: params[:comic][:text6])
     @vignette3.save!
 
-    @compVig3Ele1 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:background]).id)
+    name = params[:comic][:vig3][:background] # Danger: can be "", in which case we want to take the "Placeholder"
+    @compVig3Ele1 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig3Ele1.save!
-    @compVig3Ele2 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:character1]).id)
+
+    name = params[:comic][:vig3][:character1] # Danger: can be "", in which case we want to take the "Placeholder"
+    @compVig3Ele2 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig3Ele2.save!
-    @compVig3Ele3 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: params[:comic][:vig3][:character2]).id)
+
+    name = params[:comic][:vig3][:character2] # Danger: can be "", in which case we want to take the "Placeholder"
+    @compVig3Ele3 = Composition.new(vignette_id: @vignette3.id, element_id: Element.find_by(name: name.empty? ? "Placeholder" : name).id)
     @compVig3Ele3.save!
 
     if @comic_trip.save
