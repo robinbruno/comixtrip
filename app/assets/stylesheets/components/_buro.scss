@@ -78,19 +78,6 @@
     cursor: pointer;
   }
 
-  .publish-button:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    border: 20px solid transparent;
-    border-top-color: aliceblue;
-    border-bottom: 0;
-    border-left: 0;
-    transform: translateX(-50%);
-    pointer-events: none;
-  }
-
   /* Remove default button styles */
   .publish-button::-moz-focus-inner,
   .publish-button::-moz-focus-inner,
