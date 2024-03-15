@@ -68,13 +68,14 @@
     align-items: center;
     text-align: center;
     color: $rich-black;
-    background-color:aliceblue;
+    background-color: aliceblue;
     border-radius: 10px;
     border: 2px solid #000;
     position: relative;
     padding: 10px;
     transition: transform 0.3s ease;
     margin-top: -8px;
+    cursor: pointer;
   }
 
   .publish-button:before {
@@ -87,6 +88,22 @@
     border-bottom: 0;
     border-left: 0;
     transform: translateX(-50%);
+    pointer-events: none;
   }
+
+  /* Remove default button styles */
+  .publish-button::-moz-focus-inner,
+  .publish-button::-moz-focus-inner,
+  .publish-button:-moz-focusring,
+  .publish-button::-moz-focusring {
+    border: 0;
+    outline: none;
+  }
+
+  /* Adjust button appearance on hover */
+  .publish-button:hover {
+    transform: scale(1.05);
+  }
+
 
 }
