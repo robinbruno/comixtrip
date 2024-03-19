@@ -1,5 +1,5 @@
 class ComicTripsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :index, :create, :update ]
+  skip_before_action :authenticate_user!, only: [ :home, :index, :create, :update, :admin ]
 
   def home
     @comic_trips = ComicTrip.all.order(created_at: :desc)

@@ -390,3 +390,4 @@ bg_car = Element.create!(
 # Composition.create!(vignette: vignette21, element: ch_older_woman_teacher, z_index: 1)
 
 # puts "#{comic_trip_7.title} has been created!"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
